@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home · The RunRec</title>
+<title>Implementation Roadmap · The RunRec</title>
 <style>
 
   :root {
@@ -311,7 +311,6 @@
   }
 
 
-/* === Dashboard styles === */
 
   :root {
     --cream: #f7f3ec;
@@ -495,124 +494,6 @@
     .toc-list { grid-template-columns: 1fr; }
   }
 
-.flow-card-link { text-decoration:none; color:inherit; display:block; }
-.flow-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 32px;
-  transition: all 0.2s;
-  cursor: pointer;
-  height: 100%;
-}
-.flow-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 8px 24px rgba(232,90,62,0.12);
-  transform: translateY(-3px);
-}
-.flow-card .num {
-  font-family: var(--serif);
-  font-size: 56px;
-  font-style: italic;
-  color: var(--accent);
-  line-height: 1;
-  margin-bottom: 16px;
-}
-.flow-card .type {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 2px;
-  color: var(--accent);
-  text-transform: uppercase;
-  background: var(--accent-soft);
-  padding: 4px 10px;
-  border-radius: 3px;
-  display: inline-block;
-  margin-bottom: 16px;
-}
-.flow-card h3 {
-  font-family: var(--serif);
-  font-size: 24px;
-  line-height: 1.2;
-  margin-bottom: 16px;
-  font-weight: 700;
-}
-.flow-card .frame {
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-.flow-card .stats {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--ink);
-  border-top: 1px solid var(--line);
-  padding-top: 16px;
-}
-.flow-card .stats .stat { display: inline-flex; align-items: center; gap: 4px; }
-.flow-card .stats .stat .label { color: var(--muted); }
-.flow-card .open-arrow {
-  margin-top: 16px;
-  color: var(--accent);
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-.flow-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
-.suppl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 16px; }
-.suppl-card {
-  background: var(--ink); color: var(--cream);
-  padding: 24px; border-radius: 8px;
-  text-decoration: none; display: block;
-  transition: all 0.2s;
-}
-.suppl-card:hover {
-  background: var(--accent);
-  transform: translateY(-2px);
-}
-.suppl-card .icon {
-  font-family: var(--serif); font-size: 32px;
-  font-style: italic; color: var(--accent); margin-bottom: 8px;
-}
-.suppl-card:hover .icon { color: var(--cream); }
-.suppl-card h4 {
-  font-family: var(--serif); font-size: 18px;
-  margin-bottom: 8px;
-}
-.suppl-card p {
-  font-size: 12px; opacity: 0.8;
-  line-height: 1.5;
-}
-.flow-nav-bottom {
-  display: flex; justify-content: space-between;
-  margin: 60px 0;
-  padding: 24px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-.flow-nav-bottom a {
-  color: var(--ink); text-decoration: none;
-  font-family: var(--mono); font-size: 11px;
-  letter-spacing: 1px; text-transform: uppercase;
-  padding: 12px 20px; border-radius: 4px;
-  background: var(--cream-dark);
-  transition: all 0.2s;
-}
-.flow-nav-bottom a:hover { background: var(--accent); color: var(--cream); }
-.flow-nav-bottom a.disabled { opacity: 0.3; pointer-events: none; }
-.breadcrumb {
-  font-family: var(--mono); font-size: 11px;
-  letter-spacing: 1px; color: var(--muted);
-  text-transform: uppercase;
-  padding: 24px 0;
-}
-.breadcrumb a { color: var(--accent); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -627,267 +508,101 @@
 <nav style="background:var(--cream-dark);padding:16px 32px;border-bottom:1px solid var(--line);">
   <div class="container" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
     <span style="font-family:var(--mono);font-size:10px;letter-spacing:2px;color:var(--accent);text-transform:uppercase;">▸ NAV</span>
-    <a href="index.html" style="font-family:var(--mono);font-size:11px;text-decoration:none;background:var(--accent);color:var(--cream);padding:6px 12px;border:1px solid var(--line);border-radius:4px;">Home</a>
+    <a href="index.html" style="font-family:var(--mono);font-size:11px;text-decoration:none;background:var(--paper);color:var(--ink);padding:6px 12px;border:1px solid var(--line);border-radius:4px;">Home</a>
     <a href="principles.html" style="font-family:var(--mono);font-size:11px;text-decoration:none;background:var(--paper);color:var(--ink);padding:6px 12px;border:1px solid var(--line);border-radius:4px;">Principles</a>
     <a href="journey.html" style="font-family:var(--mono);font-size:11px;text-decoration:none;background:var(--paper);color:var(--ink);padding:6px 12px;border:1px solid var(--line);border-radius:4px;">Journey</a>
     <a href="forecasts.html" style="font-family:var(--mono);font-size:11px;text-decoration:none;background:var(--paper);color:var(--ink);padding:6px 12px;border:1px solid var(--line);border-radius:4px;">Forecasts</a>
     <a href="franchise.html" style="font-family:var(--mono);font-size:11px;text-decoration:none;background:var(--paper);color:var(--ink);padding:6px 12px;border:1px solid var(--line);border-radius:4px;">Franchise</a>
-    <a href="roadmap.html" style="font-family:var(--mono);font-size:11px;text-decoration:none;background:var(--paper);color:var(--ink);padding:6px 12px;border:1px solid var(--line);border-radius:4px;">Roadmap</a>
+    <a href="roadmap.html" style="font-family:var(--mono);font-size:11px;text-decoration:none;background:var(--accent);color:var(--cream);padding:6px 12px;border:1px solid var(--line);border-radius:4px;">Roadmap</a>
     
   </div>
 </nav>
 
-
-<section style="padding: 80px 0 40px;">
+<div class="container"><div style="font-family: var(--mono); font-size: 11px; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; padding: 24px 0;"><a href="index.html" style="color: var(--accent); text-decoration: none;">Home</a> · Implementation Roadmap</div></div>
+<section id="roadmap" style="padding: 100px 0;">
   <div class="container">
-    <div style="font-family: var(--mono); font-size: 11px; letter-spacing: 2px; color: var(--accent); text-transform: uppercase; margin-bottom: 24px;">▸ The RunRec · 10-figure email marketing operating system</div>
-    <h1 style="font-family: var(--serif); font-size: 64px; line-height: 1.05; font-weight: 700; max-width: 900px;">Every email. Every SMS.<br>Every touch <em style="color: var(--accent); font-style: italic;">numbered</em> and <em style="color: var(--accent); font-style: italic;">named</em>.</h1>
-    <p style="font-size: 17px; color: var(--muted); max-width: 720px; margin-top: 24px; line-height: 1.7;">13 flows · 65 touches · 49 email · 16 SMS. Click any flow to see the full buildout — every subject line, every body copy, every image direction, every SMS in iPhone preview.</p>
+    <div style="font-family: var(--mono); font-size: 11px; letter-spacing: 2px; color: var(--accent); text-transform: uppercase; margin-bottom: 24px;">▸ The 10x layer · Implementation roadmap</div>
+    <h2 style="font-family: var(--serif); font-size: 56px; line-height: 1.1; max-width: 900px; margin-bottom: 32px;">From <em style="color: var(--accent); font-style: italic;">map</em> to <em style="color: var(--accent); font-style: italic;">live</em>.</h2>
+    <p style="font-size: 17px; color: var(--muted); max-width: 720px; line-height: 1.7; margin-bottom: 60px;">Eyad's exact build order with hour estimates. Tier 1 flows go live first because they have the highest revenue per recipient. Tier 5 last because hygiene only matters once you're sending at volume.</p>
 
-    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px;">
-      <div style="background: var(--ink); color: var(--cream); padding: 20px; border-radius: 8px;">
-        <div style="font-family: var(--mono); font-size: 9px; letter-spacing: 2px; opacity: 0.6; text-transform: uppercase;">Total Touches</div>
-        <div style="font-family: var(--serif); font-size: 32px; font-weight: 700; margin-top: 4px;">65</div>
+    <div style="background: var(--paper); border: 1px solid var(--line); border-radius: 12px; overflow: hidden;">
+      <div style="background: var(--ink); color: var(--cream); padding: 24px 32px; font-family: var(--mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;">▸ Phase 1 · Foundation · Week 1-2 · ~6 hours</div>
+      <div style="padding: 32px;">
+        <ul style="list-style: none; padding: 0;">
+          <li style="padding: 12px 0; border-bottom: 1px dashed var(--line); display: flex; gap: 16px;"><span style="font-family: var(--mono); font-size: 11px; color: var(--muted); white-space: nowrap;">15 min</span><span style="font-size: 14px;">Archive 3 dead lists (Camp Waitlist 2025 · Jr. NBA · Preview Test) + decide on Principle Emails / PlayForever</span></li>
+          <li style="padding: 12px 0; border-bottom: 1px dashed var(--line); display: flex; gap: 16px;"><span style="font-family: var(--mono); font-size: 11px; color: var(--muted); white-space: nowrap;">15 min</span><span style="font-size: 14px;">Delete 9 obsolete templates (Nike · Holiday Sale 2022 · 4× Nonprofit · etc.)</span></li>
+          <li style="padding: 12px 0; border-bottom: 1px dashed var(--line); display: flex; gap: 16px;"><span style="font-family: var(--mono); font-size: 11px; color: var(--muted); white-space: nowrap;">2 hrs</span><span style="font-size: 14px;">Build 12 segments (4 engagement · 4 customer type · 4 behavioral)</span></li>
+          <li style="padding: 12px 0; border-bottom: 1px dashed var(--line); display: flex; gap: 16px;"><span style="font-family: var(--mono); font-size: 11px; color: var(--muted); white-space: nowrap;">1 hr</span><span style="font-size: 14px;">Set up authentication (SPF · DKIM · DMARC at p=none) — coordinate with Rob (DNS access)</span></li>
+          <li style="padding: 12px 0; border-bottom: 1px dashed var(--line); display: flex; gap: 16px;"><span style="font-family: var(--mono); font-size: 11px; color: var(--muted); white-space: nowrap;">15 min</span><span style="font-size: 14px;">Switch Newsletter list to double opt-in (CASL fix)</span></li>
+          <li style="padding: 12px 0; display: flex; gap: 16px;"><span style="font-family: var(--mono); font-size: 11px; color: var(--muted); white-space: nowrap;">2 hrs</span><span style="font-size: 14px;">Build 5 master templates (Flow / Personal · Campaign / Promo · Birthday Party · Transactional · VIP / Status)</span></li>
+        </ul>
       </div>
-      <div style="background: var(--ink); color: var(--cream); padding: 20px; border-radius: 8px;">
-        <div style="font-family: var(--mono); font-size: 9px; letter-spacing: 2px; opacity: 0.6; text-transform: uppercase;">Channel Split</div>
-        <div style="font-family: var(--serif); font-size: 32px; font-weight: 700; margin-top: 4px;">49 · 16</div>
+    </div>
+
+    <div style="background: var(--paper); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-top: 24px;">
+      <div style="background: var(--ink); color: var(--cream); padding: 24px 32px; font-family: var(--mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;">▸ Phase 2 · Build flows in priority order · Week 3-6 · ~15-20 hours</div>
+      <div style="padding: 32px;">
+        <div style="margin-bottom: 24px;">
+          <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 1.5px; color: var(--accent); text-transform: uppercase; margin-bottom: 8px;">▸ Tier 1 · Highest revenue impact · Build first</div>
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding: 8px 0; font-size: 14px;">→ <strong>Flow 12 · Abandoned Booking</strong> · Highest RPR ($3.65 industry avg) — sat in draft for 3 years · ~3 hrs · requires Vercel webhook</li>
+            <li style="padding: 8px 0; font-size: 14px;">→ <strong>Flow 02 · Booking Confirm + Reminders</strong> · Reduces no-shows 20-30% · ~2 hrs</li>
+            <li style="padding: 8px 0; font-size: 14px;">→ <strong>Flow 03 · Post-Session + Review</strong> · Captures 12% rebook rate + Google reviews · ~1.5 hrs</li>
+          </ul>
+        </div>
+        <div style="margin-bottom: 24px;">
+          <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 1.5px; color: var(--accent); text-transform: uppercase; margin-bottom: 8px;">▸ Tier 2 · Acquisition + conversion</div>
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding: 8px 0; font-size: 14px;">→ <strong>Flow 01 · Welcome Series</strong> · Rebuild current to spec · ~3 hrs</li>
+            <li style="padding: 8px 0; font-size: 14px;">→ <strong>Flow 08 · Lead Nurture</strong> · For non-bookers · ~2 hrs</li>
+            <li style="padding: 8px 0; font-size: 14px;">→ <strong>Flow 10 · Membership Conversion</strong> · 3rd-booking trigger · ~1.5 hrs</li>
+            <li style="padding: 8px 0; font-size: 14px;">→ <strong>Flow 11 · Membership Lifecycle</strong> · 365-day cycle + cancel branch · ~2 hrs</li>
+          </ul>
+        </div>
+        <div style="margin-bottom: 24px;">
+          <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 1.5px; color: var(--accent); text-transform: uppercase; margin-bottom: 8px;">▸ Tier 3 · Retention + recovery</div>
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding: 8px 0; font-size: 14px;">→ <strong>Flow 06 · Win-Back</strong> · Rebuild current to spec · ~2 hrs</li>
+            <li style="padding: 8px 0; font-size: 14px;">→ <strong>Flow 04 · Customer Birthday</strong> · Requires birthday data import (quarterly process) · ~1.5 hrs</li>
+            <li style="padding: 8px 0; font-size: 14px;">→ <strong>Flow 05 · Birthday Party Anniversary</strong> · Requires party booking data · ~1.5 hrs</li>
+          </ul>
+        </div>
+        <div style="margin-bottom: 24px;">
+          <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 1.5px; color: var(--accent); text-transform: uppercase; margin-bottom: 8px;">▸ Tier 4 · Loyalty + B2B</div>
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding: 8px 0; font-size: 14px;">→ <strong>Flow 07 · VIP + Referral</strong> · 5+ booking trigger + quarterly recurrence · ~2 hrs</li>
+            <li style="padding: 8px 0; font-size: 14px;">→ <strong>Flow 09 · Corporate &amp; League B2B</strong> · From inquiry form · ~2 hrs</li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 1.5px; color: var(--accent); text-transform: uppercase; margin-bottom: 8px;">▸ Tier 5 · Hygiene · Build last</div>
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding: 8px 0; font-size: 14px;">→ <strong>Flow 13 · Sunset / Hygiene</strong> · Activate only after 90 days clean data · ~1 hr</li>
+          </ul>
+        </div>
       </div>
-      <div style="background: var(--ink); color: var(--cream); padding: 20px; border-radius: 8px;">
-        <div style="font-family: var(--mono); font-size: 9px; letter-spacing: 2px; opacity: 0.6; text-transform: uppercase;">Revenue Target</div>
-        <div style="font-family: var(--serif); font-size: 32px; font-weight: 700; margin-top: 4px;">30%+</div>
+    </div>
+
+    <div style="background: var(--paper); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-top: 24px;">
+      <div style="background: var(--ink); color: var(--cream); padding: 24px 32px; font-family: var(--mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;">▸ Phase 3 · Franchise prep · Week 7-8 · ~3 hours</div>
+      <div style="padding: 32px;">
+        <ul style="list-style: none; padding: 0;">
+          <li style="padding: 8px 0; font-size: 14px;">→ Convert all hard-coded values to <code style="font-family: var(--mono); font-size: 12px;">{{PLACEHOLDER}}</code> variables</li>
+          <li style="padding: 8px 0; font-size: 14px;">→ Document the cloning checklist (per-franchisee onboarding)</li>
+          <li style="padding: 8px 0; font-size: 14px;">→ Contact Klaviyo sales · negotiate Portfolio pricing for franchise scale</li>
+          <li style="padding: 8px 0; font-size: 14px;">→ Create the franchise build playbook (separate document)</li>
+        </ul>
       </div>
-      <div style="background: var(--ink); color: var(--cream); padding: 20px; border-radius: 8px;">
-        <div style="font-family: var(--mono); font-size: 9px; letter-spacing: 2px; opacity: 0.6; text-transform: uppercase;">Cadence Rule</div>
-        <div style="font-family: var(--serif); font-size: 32px; font-weight: 700; margin-top: 4px;">2 : 1</div>
+    </div>
+
+    <div style="background: var(--paper); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-top: 24px;">
+      <div style="background: var(--ink); color: var(--cream); padding: 24px 32px; font-family: var(--mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;">▸ Phase 4 · Campaigns · Month 3+ · ongoing</div>
+      <div style="padding: 32px;">
+        <p style="font-size: 14px; color: var(--ink-soft); line-height: 1.7;">Once flows are humming and contributing 15%+ of revenue, layer campaigns on top: Tuesday/Thursday cadence (value/promo split), seasonal calendar, SMS campaigns 2-4/month max, content pipeline. Detailed in v2.0 master buildsheet.</p>
       </div>
     </div>
   </div>
 </section>
-<section style="padding: 40px 0 60px;"><div class="container"><div style="font-family: var(--mono); font-size: 11px; letter-spacing: 2px; color: var(--accent); text-transform: uppercase; margin-bottom: 16px;">▸ The 13 flows · click to open</div><h2 style="font-family: var(--serif); font-size: 36px; margin-bottom: 32px;">Pick a flow.</h2><div class="flow-grid">
-<a class="flow-card-link" href="welcome.html">
-  <div class="flow-card">
-    <div class="num">01</div>
-    <div class="type">Acquisition</div>
-    <h3>Welcome Series</h3>
-    <p class="frame">Brunson Soap Opera Sequence. The first three emails build identity and story before asking. By Day 14 the relationship has earned the close.</p>
-    <div class="stats">
-      <span class="stat"><span class="label">Touches:</span> <strong>7</strong></span>
-      <span class="stat"><span class="label">Window:</span> <strong>14 days</strong></span>
-      <span class="stat"><span class="label">Email:</span> <strong>6</strong></span>
-      <span class="stat"><span class="label">SMS:</span> <strong>1</strong></span>
-    </div>
-    <div class="open-arrow">▸ Open flow buildout →</div>
-  </div>
-</a>
-
-<a class="flow-card-link" href="booking-confirm.html">
-  <div class="flow-card">
-    <div class="num">02</div>
-    <div class="type">Transactional</div>
-    <h3>Booking Confirm + Reminders</h3>
-    <p class="frame">Reduce no-shows. Set the standard. Plant the upsell. Highest-open emails in the entire system. Every detail signals premium.</p>
-    <div class="stats">
-      <span class="stat"><span class="label">Touches:</span> <strong>4</strong></span>
-      <span class="stat"><span class="label">Window:</span> <strong>per booking</strong></span>
-      <span class="stat"><span class="label">Email:</span> <strong>2</strong></span>
-      <span class="stat"><span class="label">SMS:</span> <strong>2</strong></span>
-    </div>
-    <div class="open-arrow">▸ Open flow buildout →</div>
-  </div>
-</a>
-
-<a class="flow-card-link" href="post-session.html">
-  <div class="flow-card">
-    <div class="num">03</div>
-    <div class="type">Retention</div>
-    <h3>Post-Session + Review</h3>
-    <p class="frame">Strike while dopamine is hot. The 2-hour post-session window is where Google reviews and rebookings actually happen.</p>
-    <div class="stats">
-      <span class="stat"><span class="label">Touches:</span> <strong>4</strong></span>
-      <span class="stat"><span class="label">Window:</span> <strong>7 days</strong></span>
-      <span class="stat"><span class="label">Email:</span> <strong>2</strong></span>
-      <span class="stat"><span class="label">SMS:</span> <strong>2</strong></span>
-    </div>
-    <div class="open-arrow">▸ Open flow buildout →</div>
-  </div>
-</a>
-
-<a class="flow-card-link" href="customer-birthday.html">
-  <div class="flow-card">
-    <div class="num">04</div>
-    <div class="type">Date-based</div>
-    <h3>Customer Birthday</h3>
-    <p class="frame">Hormozi grand slam — give a real gift, not a discount. People talk about gifts. Nobody talks about 10% off.</p>
-    <div class="stats">
-      <span class="stat"><span class="label">Touches:</span> <strong>5</strong></span>
-      <span class="stat"><span class="label">Window:</span> <strong>30 days</strong></span>
-      <span class="stat"><span class="label">Email:</span> <strong>3</strong></span>
-      <span class="stat"><span class="label">SMS:</span> <strong>2</strong></span>
-    </div>
-    <div class="open-arrow">▸ Open flow buildout →</div>
-  </div>
-</a>
-
-<a class="flow-card-link" href="birthday-anniversary.html">
-  <div class="flow-card">
-    <div class="num">05</div>
-    <div class="type">Event-based</div>
-    <h3>Birthday Party Anniversary</h3>
-    <p class="frame">Get there before the parent starts planning. Triggering 11 months out lets RunRec own the consideration moment.</p>
-    <div class="stats">
-      <span class="stat"><span class="label">Touches:</span> <strong>5</strong></span>
-      <span class="stat"><span class="label">Window:</span> <strong>28 days</strong></span>
-      <span class="stat"><span class="label">Email:</span> <strong>3</strong></span>
-      <span class="stat"><span class="label">SMS:</span> <strong>2</strong></span>
-    </div>
-    <div class="open-arrow">▸ Open flow buildout →</div>
-  </div>
-</a>
-
-<a class="flow-card-link" href="win-back.html">
-  <div class="flow-card">
-    <div class="num">06</div>
-    <div class="type">Recovery</div>
-    <h3>Win-Back</h3>
-    <p class="frame">Hormozi: ask different questions. We miss you five times doesnt work. The breakup at the end is the highest-converter.</p>
-    <div class="stats">
-      <span class="stat"><span class="label">Touches:</span> <strong>6</strong></span>
-      <span class="stat"><span class="label">Window:</span> <strong>31 days</strong></span>
-      <span class="stat"><span class="label">Email:</span> <strong>4</strong></span>
-      <span class="stat"><span class="label">SMS:</span> <strong>2</strong></span>
-    </div>
-    <div class="open-arrow">▸ Open flow buildout →</div>
-  </div>
-</a>
-
-<a class="flow-card-link" href="vip-referral.html">
-  <div class="flow-card">
-    <div class="num">07</div>
-    <div class="type">Loyalty</div>
-    <h3>VIP + Referral</h3>
-    <p class="frame">Status conferral first, ask second. VIPs dont respond to discounts — they respond to being seen.</p>
-    <div class="stats">
-      <span class="stat"><span class="label">Touches:</span> <strong>5</strong></span>
-      <span class="stat"><span class="label">Window:</span> <strong>30 days + ongoing</strong></span>
-      <span class="stat"><span class="label">Email:</span> <strong>4</strong></span>
-      <span class="stat"><span class="label">SMS:</span> <strong>1</strong></span>
-    </div>
-    <div class="open-arrow">▸ Open flow buildout →</div>
-  </div>
-</a>
-
-<a class="flow-card-link" href="lead-nurture.html">
-  <div class="flow-card">
-    <div class="num">08</div>
-    <div class="type">Lead</div>
-    <h3>Lead Nurture</h3>
-    <p class="frame">Hormozi value equation in motion. Push them across the line in 21 days or release them.</p>
-    <div class="stats">
-      <span class="stat"><span class="label">Touches:</span> <strong>7</strong></span>
-      <span class="stat"><span class="label">Window:</span> <strong>21 days</strong></span>
-      <span class="stat"><span class="label">Email:</span> <strong>5</strong></span>
-      <span class="stat"><span class="label">SMS:</span> <strong>2</strong></span>
-    </div>
-    <div class="open-arrow">▸ Open flow buildout →</div>
-  </div>
-</a>
-
-<a class="flow-card-link" href="corporate-league.html">
-  <div class="flow-card">
-    <div class="num">09</div>
-    <div class="type">B2B</div>
-    <h3>Corporate & League</h3>
-    <p class="frame">B2B is patience + persistence. Speed of first response matters more than polish.</p>
-    <div class="stats">
-      <span class="stat"><span class="label">Touches:</span> <strong>7</strong></span>
-      <span class="stat"><span class="label">Window:</span> <strong>21 days</strong></span>
-      <span class="stat"><span class="label">Email:</span> <strong>5</strong></span>
-      <span class="stat"><span class="label">SMS:</span> <strong>2</strong></span>
-    </div>
-    <div class="open-arrow">▸ Open flow buildout →</div>
-  </div>
-</a>
-
-<a class="flow-card-link" href="membership-conversion.html">
-  <div class="flow-card">
-    <div class="num">10</div>
-    <div class="type">Conversion · NEW</div>
-    <h3>Membership Conversion</h3>
-    <p class="frame">Show them the math. By the 3rd booking, the customer has revealed their pattern.</p>
-    <div class="stats">
-      <span class="stat"><span class="label">Touches:</span> <strong>4</strong></span>
-      <span class="stat"><span class="label">Window:</span> <strong>14 days</strong></span>
-      <span class="stat"><span class="label">Email:</span> <strong>3</strong></span>
-      <span class="stat"><span class="label">SMS:</span> <strong>1</strong></span>
-    </div>
-    <div class="open-arrow">▸ Open flow buildout →</div>
-  </div>
-</a>
-
-<a class="flow-card-link" href="membership-lifecycle.html">
-  <div class="flow-card">
-    <div class="num">11</div>
-    <div class="type">Retention · NEW</div>
-    <h3>Membership Lifecycle</h3>
-    <p class="frame">Members churn quietly. The renewal date is the cliff — most cancellations happen 30-60 days before.</p>
-    <div class="stats">
-      <span class="stat"><span class="label">Touches:</span> <strong>6 + 2</strong></span>
-      <span class="stat"><span class="label">Window:</span> <strong>365 days</strong></span>
-      <span class="stat"><span class="label">Email:</span> <strong>7</strong></span>
-      <span class="stat"><span class="label">SMS:</span> <strong>1</strong></span>
-    </div>
-    <div class="open-arrow">▸ Open flow buildout →</div>
-  </div>
-</a>
-
-<a class="flow-card-link" href="abandoned-booking.html">
-  <div class="flow-card">
-    <div class="num">12</div>
-    <div class="type">Recovery · NEW</div>
-    <h3>Abandoned Booking</h3>
-    <p class="frame">They were 80% of the way there. Single highest-RPR flow in any marketing system. Sat in draft for 3 years.</p>
-    <div class="stats">
-      <span class="stat"><span class="label">Touches:</span> <strong>3</strong></span>
-      <span class="stat"><span class="label">Window:</span> <strong>72 hours</strong></span>
-      <span class="stat"><span class="label">Email:</span> <strong>2</strong></span>
-      <span class="stat"><span class="label">SMS:</span> <strong>1</strong></span>
-    </div>
-    <div class="open-arrow">▸ Open flow buildout →</div>
-  </div>
-</a>
-
-<a class="flow-card-link" href="sunset-hygiene.html">
-  <div class="flow-card">
-    <div class="num">13</div>
-    <div class="type">List Health · NEW</div>
-    <h3>Sunset / Hygiene</h3>
-    <p class="frame">Dormant subscribers hurt deliverability worse than unsubscribes. Aggressive list hygiene improves inbox placement for engaged subscribers.</p>
-    <div class="stats">
-      <span class="stat"><span class="label">Touches:</span> <strong>2</strong></span>
-      <span class="stat"><span class="label">Window:</span> <strong>14 days</strong></span>
-      <span class="stat"><span class="label">Email:</span> <strong>2</strong></span>
-      <span class="stat"><span class="label">SMS:</span> <strong>0</strong></span>
-    </div>
-    <div class="open-arrow">▸ Open flow buildout →</div>
-  </div>
-</a>
-</div></div></section>
-<section style="padding: 60px 0; background: var(--cream-dark);">
-  <div class="container">
-    <div style="font-family: var(--mono); font-size: 11px; letter-spacing: 2px; color: var(--accent); text-transform: uppercase; margin-bottom: 16px;">▸ Strategic context</div>
-    <h2 style="font-family: var(--serif); font-size: 36px; margin-bottom: 8px;">The frame around the flows.</h2>
-    <p style="font-size: 15px; color: var(--muted); max-width: 640px; margin-bottom: 32px;">The strategic layer. Read these to understand why the flows exist, how they connect, and what they should produce.</p>
-    <div class="suppl-grid">
-      <a class="suppl-card" href="principles.html"><div class="icon">⚡</div><h4>Operating Principles</h4><p>The 6 rules every flow obeys. Brunson + Hormozi.</p></a>
-      <a class="suppl-card" href="journey.html"><div class="icon">→</div><h4>Cross-Flow Journey</h4><p>How the 13 flows hand off as one customer journey.</p></a>
-      <a class="suppl-card" href="forecasts.html"><div class="icon">$</div><h4>Performance Forecasts</h4><p>Industry RPR + 6-month revenue projections per flow.</p></a>
-      <a class="suppl-card" href="franchise.html"><div class="icon">⚐</div><h4>Franchise + Compliance</h4><p>Variable system + CASL/CAN-SPAM/TCPA layer.</p></a>
-      <a class="suppl-card" href="roadmap.html"><div class="icon">▸</div><h4>Implementation Roadmap</h4><p>Eyads exact build order with hour estimates.</p></a>
-    </div>
-  </div>
-</section>
-
 <footer class="site"><div class="container"><div>▸ The RunRec · Email Marketing Pipeline · v1.0 · Phase 1 (Structural)</div></div></footer>
 </body>
 </html>
