@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Flow 10: Membership Conversion · The RunRec</title>
 <style>
 
@@ -495,133 +492,42 @@
     .toc-list { grid-template-columns: 1fr; }
   }
 
-.flow-card-link { text-decoration:none; color:inherit; display:block; }
-.flow-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 32px;
-  transition: all 0.2s;
-  cursor: pointer;
-  height: 100%;
-}
-.flow-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 8px 24px rgba(232,90,62,0.12);
-  transform: translateY(-3px);
-}
-.flow-card .num {
-  font-family: var(--serif);
-  font-size: 56px;
-  font-style: italic;
-  color: var(--accent);
-  line-height: 1;
-  margin-bottom: 16px;
-}
-.flow-card .type {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 2px;
-  color: var(--accent);
-  text-transform: uppercase;
-  background: var(--accent-soft);
-  padding: 4px 10px;
-  border-radius: 3px;
-  display: inline-block;
-  margin-bottom: 16px;
-}
-.flow-card h3 {
-  font-family: var(--serif);
-  font-size: 24px;
-  line-height: 1.2;
-  margin-bottom: 16px;
-  font-weight: 700;
-}
-.flow-card .frame {
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-.flow-card .stats {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--ink);
-  border-top: 1px solid var(--line);
-  padding-top: 16px;
-}
-.flow-card .stats .stat { display: inline-flex; align-items: center; gap: 4px; }
-.flow-card .stats .stat .label { color: var(--muted); }
-.flow-card .open-arrow {
-  margin-top: 16px;
-  color: var(--accent);
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-.flow-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
-.suppl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 16px; }
-.suppl-card {
-  background: var(--ink); color: var(--cream);
-  padding: 24px; border-radius: 8px;
-  text-decoration: none; display: block;
-  transition: all 0.2s;
-}
-.suppl-card:hover {
-  background: var(--accent);
-  transform: translateY(-2px);
-}
-.suppl-card .icon {
-  font-family: var(--serif); font-size: 32px;
-  font-style: italic; color: var(--accent); margin-bottom: 8px;
-}
-.suppl-card:hover .icon { color: var(--cream); }
-.suppl-card h4 {
-  font-family: var(--serif); font-size: 18px;
-  margin-bottom: 8px;
-}
-.suppl-card p {
-  font-size: 12px; opacity: 0.8;
-  line-height: 1.5;
-}
-.flow-nav-bottom {
-  display: flex; justify-content: space-between;
-  margin: 60px 0;
-  padding: 24px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-.flow-nav-bottom a {
-  color: var(--ink); text-decoration: none;
-  font-family: var(--mono); font-size: 11px;
-  letter-spacing: 1px; text-transform: uppercase;
-  padding: 12px 20px; border-radius: 4px;
-  background: var(--cream-dark);
-  transition: all 0.2s;
-}
-.flow-nav-bottom a:hover { background: var(--accent); color: var(--cream); }
-.flow-nav-bottom a.disabled { opacity: 0.3; pointer-events: none; }
-.breadcrumb {
-  font-family: var(--mono); font-size: 11px;
-  letter-spacing: 1px; color: var(--muted);
-  text-transform: uppercase;
-  padding: 24px 0;
-}
-.breadcrumb a { color: var(--accent); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
-</style>
-</head>
+.flow-card-link{text-decoration:none;color:inherit;display:block;}
+.flow-card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:32px;transition:all 0.2s;cursor:pointer;height:100%;}
+.flow-card:hover{border-color:var(--accent);box-shadow:0 8px 24px rgba(232,90,62,0.12);transform:translateY(-3px);}
+.flow-card .num{font-family:var(--serif);font-size:56px;font-style:italic;color:var(--accent);line-height:1;margin-bottom:16px;}
+.flow-card .type{font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--accent);text-transform:uppercase;background:var(--accent-soft);padding:4px 10px;border-radius:3px;display:inline-block;margin-bottom:16px;}
+.flow-card h3{font-family:var(--serif);font-size:24px;line-height:1.2;margin-bottom:16px;font-weight:700;}
+.flow-card .frame{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:24px;}
+.flow-card .stats{display:flex;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;color:var(--ink);border-top:1px solid var(--line);padding-top:16px;}
+.flow-card .stats .stat{display:inline-flex;align-items:center;gap:4px;}
+.flow-card .stats .stat .label{color:var(--muted);}
+.flow-card .open-arrow{margin-top:16px;color:var(--accent);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:1px;}
+.flow-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;}
+.suppl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px;}
+.suppl-card{background:var(--ink);color:var(--cream);padding:24px;border-radius:8px;text-decoration:none;display:block;transition:all 0.2s;}
+.suppl-card:hover{background:var(--accent);transform:translateY(-2px);}
+.suppl-card .icon{font-family:var(--serif);font-size:32px;font-style:italic;color:var(--accent);margin-bottom:8px;}
+.suppl-card:hover .icon{color:var(--cream);}
+.suppl-card h4{font-family:var(--serif);font-size:18px;margin-bottom:8px;}
+.suppl-card p{font-size:12px;opacity:0.8;line-height:1.5;}
+.flow-nav-bottom{display:flex;justify-content:space-between;margin:60px 0;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.flow-nav-bottom a{color:var(--ink);text-decoration:none;font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;border-radius:4px;background:var(--cream-dark);transition:all 0.2s;}
+.flow-nav-bottom a:hover{background:var(--accent);color:var(--cream);}
+.flow-nav-bottom a.disabled{opacity:0.3;pointer-events:none;}
+.breadcrumb{font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;padding:24px 0;}
+.breadcrumb a{color:var(--accent);text-decoration:none;}
+.breadcrumb a:hover{text-decoration:underline;}
+.qa-banner{background:#22c55e;color:#fff;padding:14px 32px;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;}
+.qa-banner strong{font-weight:700;}
+</style></head>
 <body>
 
 <header class="site">
   <div class="container">
     <a href="index.html" style="text-decoration:none;color:inherit;"><div class="logo"><div class="dot"></div><div class="text">The RunRec<small>Email Marketing Pipeline</small></div></a>
     </div>
-    <div style="font-family:var(--mono);font-size:10px;letter-spacing:1.5px;color:var(--accent);text-transform:uppercase;">▸ v1.0 · Phase 1</div>
+    <div style="font-family:var(--mono);font-size:10px;letter-spacing:1.5px;color:var(--accent);text-transform:uppercase;">▸ v1.1 · Post-QA</div>
   </div>
 </header>
 <nav style="background:var(--cream-dark);padding:16px 32px;border-bottom:1px solid var(--line);">
@@ -633,17 +539,13 @@
     <a href="forecasts.html" style="font-family:var(--mono);font-size:11px;text-decoration:none;background:var(--paper);color:var(--ink);padding:6px 12px;border:1px solid var(--line);border-radius:4px;">Forecasts</a>
     <a href="franchise.html" style="font-family:var(--mono);font-size:11px;text-decoration:none;background:var(--paper);color:var(--ink);padding:6px 12px;border:1px solid var(--line);border-radius:4px;">Franchise</a>
     <a href="roadmap.html" style="font-family:var(--mono);font-size:11px;text-decoration:none;background:var(--paper);color:var(--ink);padding:6px 12px;border:1px solid var(--line);border-radius:4px;">Roadmap</a>
+    <a href="variables.html" style="font-family:var(--mono);font-size:11px;text-decoration:none;background:var(--paper);color:var(--ink);padding:6px 12px;border:1px solid var(--line);border-radius:4px;">Variables</a>
     
   </div>
 </nav>
 
-
-<div class="container">
-  <div class="breadcrumb">
-    <a href="index.html">Home</a> · Flow 10
-  </div>
-</div>
-<section class="flow-section" id="flow-10">
+<div class="qa-banner">▸ v1.1 · Post-QA · 30 surgical edits applied across all 13 flows · <strong>see Variables Spec for full templating</strong></div>
+<div class="container"><div class="breadcrumb"><a href="index.html">Home</a> · Flow 10</div></div><section class="flow-section" id="flow-10">
   <div class="flow-header">
     <div class="ftype">Flow 10 / Conversion · NEW</div>
     <h1>Membership <em>Conversion</em></h1>
@@ -661,21 +563,22 @@
     <div class="split">
       <div class="email-preview">
         <div class="email-header"><div class="row"><strong>From:</strong> The RunRec &lt;contact@therunrec.com&gt;</div></div>
-        <div class="email-subject">You've spent ${{X}} on bookings. Members pay ${{Y}}/mo.</div>
+        <div class="email-subject">Quick math on your last 3 bookings.</div>
         <div class="email-preview-text">Personalized math. Your actual spend vs. membership cost.</div>
         <div class="email-image-block"><div class="img-desc">Visual math layout: bar chart showing single-booking spend vs. membership cost. Or simple numbers stacked with "you" highlighted.</div></div>
         <div class="email-body">
           <p>Hey {{first_name}},</p>
           <p>Quick math.</p>
           <p>You've booked <strong>{{booking_count}}</strong> sessions at RunRec in the last <strong>{{days}}</strong> days.</p>
-          <p>Total spent: <strong>${{total_spent}}</strong><br>Average per booking: <strong>${{avg_per_booking}}</strong></p>
-          <p>A Common User membership is <strong>$89/month</strong>. Includes 12 hours/year + 5% off every booking.</p>
-          <p>At your current pace, you'd save <strong>${{annual_savings}} a year</strong>.</p>
+          <p>Total spent: <strong>${{total_spent}}</strong></p>
+          <p>Here's what membership would change at your current pace:</p>
+          <p>→ <strong>Priority booking</strong> — book 6-12 weeks ahead vs same-day for non-members<br>→ <strong>5-10% off every booking</strong> after included credits<br>→ <strong>Annual member party + product discounts</strong></p>
+          <p>Membership isn't mostly about cash savings — it's about getting first dibs on the Saturday peak slots that book up 4 weeks ahead. The math: <a class="email-cta-link">{{math_breakdown_url}}</a></p>
           <p>Math: <a class="email-cta-link">{{math_breakdown_url}}</a></p>
           <p class="signature">— Sal</p>
           <p class="ps"><strong>PS</strong> — Membership isn't for everyone. If you book 1-2x a year, just keep doing what you're doing. But at 3+ bookings every couple months, the math flips.</p>
         </div>
-        <div class="email-footer">The RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a></div>
+        <div class="email-footer">The RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a> · <a href="#">manage preferences</a></div>
       </div>
       <div class="side-panel">
         <div class="panel-card"><div class="label">▸ Image direction</div><h4>Real numbers · clean visualization</h4><p>Personalized bar chart or styled number layout. The math IS the visual. Brand-aligned colors only.</p></div>
@@ -700,9 +603,9 @@
           <p>The math we showed yesterday is just the cash savings. <strong>The real value is the priority booking</strong> — Saturday peak slots get taken 4 weeks out.</p>
           <p>Tiers: <a class="email-cta-link">{{tiers_url}}</a></p>
           <p class="signature">— Sal</p>
-          <p class="ps"><strong>PS</strong> — The Super User tier ($359/mo, 48 hours/year) is the best deal if you book 4+ hours a month. Math works out to $7.48/hr — cheaper than most public gym day passes.</p>
+          <p class="ps"><strong>PS</strong> — The Super User tier ($359/mo) gets 48 hours/year + book 12 weeks ahead + 10% off every additional booking + member party + Swag Kit. The real value isn't the hours — it's never being shut out of a Saturday peak slot.</p>
         </div>
-        <div class="email-footer">The RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a></div>
+        <div class="email-footer">The RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a> · <a href="#">manage preferences</a></div>
       </div>
       <div class="side-panel">
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>ASYMMETRY</h4><p>Hormozi: stack the value. Highlight #1 (priority booking) as the real differentiator.</p></div>
@@ -723,14 +626,13 @@
           <p>Meet {{name}}. Started as a regular booker like you.</p>
           <p>Booked 3-4x a month for 6 months. Spent ~$1,200.</p>
           <p>Switched to a Frequent User membership at the 6-month mark.</p>
-          <p><strong>The math:</strong> $1,200/year on bookings vs $1,668/year on membership ($139/mo × 12). On paper, membership costs $468 more per year.</p>
-          <p>But — Frequent User gets 18 hours/year built in (saves $1,602 vs single bookings) plus 10% off everything else (~$80/year), plus priority booking (worth the price of Saturday morning court access alone, in {{name}}'s words).</p>
-          <p><strong>Net: {{name}} saves about $1,200 a year as a member.</strong> Books 2-3 more times a month than before because it "feels paid for."</p>
+          <p><strong>The math:</strong> $1,200/year on bookings is roughly $100/month spent on courts. Frequent User membership ($139/mo) costs slightly more on paper. But — Frequent gets 18 hours/year priority-booked (Saturday peak slots locked in 8 weeks ahead), 10% off every additional booking, plus the member party.</p>
+          <p><strong>{{name}}'s take: "I stopped competing for Saturday slots. That alone was worth it. I also book 2-3 more times a month because it feels paid for."</strong></p>
           <p>Tier comparison: <a class="email-cta-link">{{tiers_url}}</a></p>
           <p class="signature">— Sal</p>
           <p class="ps"><strong>PS</strong> — {{name}} is a real person. If you reply YES I'll connect you — he's happy to talk about the switch.</p>
         </div>
-        <div class="email-footer">The RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a></div>
+        <div class="email-footer">The RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a> · <a href="#">manage preferences</a></div>
       </div>
       <div class="side-panel">
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>PROOF</h4><p>Real member, real math, real numbers. PS offers direct introduction (highest-converting move for fence-sitters).</p></div>
@@ -751,15 +653,6 @@
 </section>
 
 <!-- FLOW 11 -->
-
-<div class="container">
-  <div class="flow-nav-bottom">
-    <a href="corporate-league.html">← Flow 09 · Corporate & League</a>
-    <a href="index.html">▸ All Flows</a>
-    <a href="membership-lifecycle.html">Flow 11 · Membership Lifecycle →</a>
-  </div>
-</div>
-
-<footer class="site"><div class="container"><div>▸ The RunRec · Email Marketing Pipeline · v1.0 · Phase 1 (Structural)</div></div></footer>
-</body>
-</html>
+<div class="container"><div class="flow-nav-bottom"><a href="corporate-league.html">← Flow 09 · Corporate & League</a><a href="index.html">▸ All Flows</a><a href="membership-lifecycle.html">Flow 11 · Membership Lifecycle →</a></div></div>
+<footer class="site"><div class="container"><div>▸ The RunRec · Email Marketing Pipeline · v1.1 · Phase 1 (Structural · Post-QA)</div></div></footer>
+</body></html>

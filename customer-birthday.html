@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Flow 04: Customer Birthday · The RunRec</title>
 <style>
 
@@ -495,133 +492,42 @@
     .toc-list { grid-template-columns: 1fr; }
   }
 
-.flow-card-link { text-decoration:none; color:inherit; display:block; }
-.flow-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 32px;
-  transition: all 0.2s;
-  cursor: pointer;
-  height: 100%;
-}
-.flow-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 8px 24px rgba(232,90,62,0.12);
-  transform: translateY(-3px);
-}
-.flow-card .num {
-  font-family: var(--serif);
-  font-size: 56px;
-  font-style: italic;
-  color: var(--accent);
-  line-height: 1;
-  margin-bottom: 16px;
-}
-.flow-card .type {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 2px;
-  color: var(--accent);
-  text-transform: uppercase;
-  background: var(--accent-soft);
-  padding: 4px 10px;
-  border-radius: 3px;
-  display: inline-block;
-  margin-bottom: 16px;
-}
-.flow-card h3 {
-  font-family: var(--serif);
-  font-size: 24px;
-  line-height: 1.2;
-  margin-bottom: 16px;
-  font-weight: 700;
-}
-.flow-card .frame {
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-.flow-card .stats {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--ink);
-  border-top: 1px solid var(--line);
-  padding-top: 16px;
-}
-.flow-card .stats .stat { display: inline-flex; align-items: center; gap: 4px; }
-.flow-card .stats .stat .label { color: var(--muted); }
-.flow-card .open-arrow {
-  margin-top: 16px;
-  color: var(--accent);
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-.flow-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
-.suppl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 16px; }
-.suppl-card {
-  background: var(--ink); color: var(--cream);
-  padding: 24px; border-radius: 8px;
-  text-decoration: none; display: block;
-  transition: all 0.2s;
-}
-.suppl-card:hover {
-  background: var(--accent);
-  transform: translateY(-2px);
-}
-.suppl-card .icon {
-  font-family: var(--serif); font-size: 32px;
-  font-style: italic; color: var(--accent); margin-bottom: 8px;
-}
-.suppl-card:hover .icon { color: var(--cream); }
-.suppl-card h4 {
-  font-family: var(--serif); font-size: 18px;
-  margin-bottom: 8px;
-}
-.suppl-card p {
-  font-size: 12px; opacity: 0.8;
-  line-height: 1.5;
-}
-.flow-nav-bottom {
-  display: flex; justify-content: space-between;
-  margin: 60px 0;
-  padding: 24px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-.flow-nav-bottom a {
-  color: var(--ink); text-decoration: none;
-  font-family: var(--mono); font-size: 11px;
-  letter-spacing: 1px; text-transform: uppercase;
-  padding: 12px 20px; border-radius: 4px;
-  background: var(--cream-dark);
-  transition: all 0.2s;
-}
-.flow-nav-bottom a:hover { background: var(--accent); color: var(--cream); }
-.flow-nav-bottom a.disabled { opacity: 0.3; pointer-events: none; }
-.breadcrumb {
-  font-family: var(--mono); font-size: 11px;
-  letter-spacing: 1px; color: var(--muted);
-  text-transform: uppercase;
-  padding: 24px 0;
-}
-.breadcrumb a { color: var(--accent); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
-</style>
-</head>
+.flow-card-link{text-decoration:none;color:inherit;display:block;}
+.flow-card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:32px;transition:all 0.2s;cursor:pointer;height:100%;}
+.flow-card:hover{border-color:var(--accent);box-shadow:0 8px 24px rgba(232,90,62,0.12);transform:translateY(-3px);}
+.flow-card .num{font-family:var(--serif);font-size:56px;font-style:italic;color:var(--accent);line-height:1;margin-bottom:16px;}
+.flow-card .type{font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--accent);text-transform:uppercase;background:var(--accent-soft);padding:4px 10px;border-radius:3px;display:inline-block;margin-bottom:16px;}
+.flow-card h3{font-family:var(--serif);font-size:24px;line-height:1.2;margin-bottom:16px;font-weight:700;}
+.flow-card .frame{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:24px;}
+.flow-card .stats{display:flex;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;color:var(--ink);border-top:1px solid var(--line);padding-top:16px;}
+.flow-card .stats .stat{display:inline-flex;align-items:center;gap:4px;}
+.flow-card .stats .stat .label{color:var(--muted);}
+.flow-card .open-arrow{margin-top:16px;color:var(--accent);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:1px;}
+.flow-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;}
+.suppl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px;}
+.suppl-card{background:var(--ink);color:var(--cream);padding:24px;border-radius:8px;text-decoration:none;display:block;transition:all 0.2s;}
+.suppl-card:hover{background:var(--accent);transform:translateY(-2px);}
+.suppl-card .icon{font-family:var(--serif);font-size:32px;font-style:italic;color:var(--accent);margin-bottom:8px;}
+.suppl-card:hover .icon{color:var(--cream);}
+.suppl-card h4{font-family:var(--serif);font-size:18px;margin-bottom:8px;}
+.suppl-card p{font-size:12px;opacity:0.8;line-height:1.5;}
+.flow-nav-bottom{display:flex;justify-content:space-between;margin:60px 0;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.flow-nav-bottom a{color:var(--ink);text-decoration:none;font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;border-radius:4px;background:var(--cream-dark);transition:all 0.2s;}
+.flow-nav-bottom a:hover{background:var(--accent);color:var(--cream);}
+.flow-nav-bottom a.disabled{opacity:0.3;pointer-events:none;}
+.breadcrumb{font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;padding:24px 0;}
+.breadcrumb a{color:var(--accent);text-decoration:none;}
+.breadcrumb a:hover{text-decoration:underline;}
+.qa-banner{background:#22c55e;color:#fff;padding:14px 32px;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;}
+.qa-banner strong{font-weight:700;}
+</style></head>
 <body>
 
 <header class="site">
   <div class="container">
     <a href="index.html" style="text-decoration:none;color:inherit;"><div class="logo"><div class="dot"></div><div class="text">The RunRec<small>Email Marketing Pipeline</small></div></a>
     </div>
-    <div style="font-family:var(--mono);font-size:10px;letter-spacing:1.5px;color:var(--accent);text-transform:uppercase;">▸ v1.0 · Phase 1</div>
+    <div style="font-family:var(--mono);font-size:10px;letter-spacing:1.5px;color:var(--accent);text-transform:uppercase;">▸ v1.1 · Post-QA</div>
   </div>
 </header>
 <nav style="background:var(--cream-dark);padding:16px 32px;border-bottom:1px solid var(--line);">
@@ -633,17 +539,13 @@
     <a href="forecasts.html" style="font-family:var(--mono);font-size:11px;text-decoration:none;background:var(--paper);color:var(--ink);padding:6px 12px;border:1px solid var(--line);border-radius:4px;">Forecasts</a>
     <a href="franchise.html" style="font-family:var(--mono);font-size:11px;text-decoration:none;background:var(--paper);color:var(--ink);padding:6px 12px;border:1px solid var(--line);border-radius:4px;">Franchise</a>
     <a href="roadmap.html" style="font-family:var(--mono);font-size:11px;text-decoration:none;background:var(--paper);color:var(--ink);padding:6px 12px;border:1px solid var(--line);border-radius:4px;">Roadmap</a>
+    <a href="variables.html" style="font-family:var(--mono);font-size:11px;text-decoration:none;background:var(--paper);color:var(--ink);padding:6px 12px;border:1px solid var(--line);border-radius:4px;">Variables</a>
     
   </div>
 </nav>
 
-
-<div class="container">
-  <div class="breadcrumb">
-    <a href="index.html">Home</a> · Flow 04
-  </div>
-</div>
-<section class="flow-section" id="flow-04">
+<div class="qa-banner">▸ v1.1 · Post-QA · 30 surgical edits applied across all 13 flows · <strong>see Variables Spec for full templating</strong></div>
+<div class="container"><div class="breadcrumb"><a href="index.html">Home</a> · Flow 04</div></div><section class="flow-section" id="flow-04">
   <div class="flow-header">
     <div class="ftype">Flow 04 / Date-based</div>
     <h1>Customer <em>Birthday</em></h1>
@@ -676,7 +578,7 @@
           <p class="signature">— The RunRec team</p>
           <p class="ps"><strong>PS</strong> — Don't worry, it's not a 10% off coupon. People talk about gifts, not discounts.</p>
         </div>
-        <div class="email-footer">The RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a></div>
+        <div class="email-footer">The RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a> · <a href="#">manage preferences</a></div>
       </div>
       <div class="side-panel">
         <div class="panel-card"><div class="label">▸ Image direction</div><h4>Gift box · single light · moody</h4><p>Avoid balloon-and-streamers cliché. The brand is "premium private courts," not "kids party shop." Single wrapped box on hardwood, overhead light.</p></div>
@@ -723,7 +625,7 @@
           <p class="signature">— Sal</p>
           <p class="ps"><strong>PS</strong> — The code is single-use. If you book a longer slot, the first hour is free, the rest at standard rate.</p>
         </div>
-        <div class="email-footer">The RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a></div>
+        <div class="email-footer">The RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a> · <a href="#">manage preferences</a></div>
       </div>
       <div class="side-panel">
         <div class="panel-card"><div class="label">▸ Image direction</div><h4>Calendar / time-slot cards</h4><p>Off-peak hours visualized. Simple layout, no decorative birthday imagery.</p></div>
@@ -752,7 +654,7 @@
           <p class="signature">— Sal</p>
           <p class="ps"><strong>PS</strong> — If life's been busy and you'd rather give the hour to a friend, just reply with their email. We'll transfer it.</p>
         </div>
-        <div class="email-footer">The RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a></div>
+        <div class="email-footer">The RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a> · <a href="#">manage preferences</a></div>
       </div>
       <div class="side-panel">
         <div class="panel-card"><div class="label">▸ Specs</div><ul><li>Word count: <strong>62 words</strong></li><li>Specific expiry date (not "soon")</li><li>PS gift-transfer is the unlock mechanism for hard cases</li></ul></div>
@@ -778,15 +680,6 @@
 </section>
 
 <!-- FLOW 05 -->
-
-<div class="container">
-  <div class="flow-nav-bottom">
-    <a href="post-session.html">← Flow 03 · Post-Session + Review</a>
-    <a href="index.html">▸ All Flows</a>
-    <a href="birthday-anniversary.html">Flow 05 · Birthday Party Anniversary →</a>
-  </div>
-</div>
-
-<footer class="site"><div class="container"><div>▸ The RunRec · Email Marketing Pipeline · v1.0 · Phase 1 (Structural)</div></div></footer>
-</body>
-</html>
+<div class="container"><div class="flow-nav-bottom"><a href="post-session.html">← Flow 03 · Post-Session + Review</a><a href="index.html">▸ All Flows</a><a href="birthday-anniversary.html">Flow 05 · Birthday Party Anniversary →</a></div></div>
+<footer class="site"><div class="container"><div>▸ The RunRec · Email Marketing Pipeline · v1.1 · Phase 1 (Structural · Post-QA)</div></div></footer>
+</body></html>

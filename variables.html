@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Variables Spec · The RunRec</title>
+<style>
+:root { --cream: #f7f3ec; --cream-dark: #ede7db; --paper: #fff; --ink: #1a1a1a; --ink-soft: #2a2a2a; --accent: #e85a3e; --accent-soft: rgba(232,90,62,0.12); --muted: #6b6b6b; --line: rgba(26,26,26,0.08); --serif: 'Playfair Display','Iowan Old Style',Georgia,serif; --sans: -apple-system,BlinkMacSystemFont,'Inter','Helvetica Neue',sans-serif; --mono: 'JetBrains Mono','Menlo','Monaco',monospace; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--cream); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+.container { max-width:1180px; margin:0 auto; padding:0 32px; }
+header.site { padding:28px 0; border-bottom:1px solid var(--line); }
+header.site .container { display:flex; justify-content:space-between; align-items:center; }
+.logo { display:flex; align-items:center; gap:14px; }
+.logo .dot { width:28px; height:28px; border-radius:50%; background:var(--ink); position:relative; }
+.logo .dot::after { content:''; position:absolute; top:5px; left:5px; width:8px; height:8px; border-radius:50%; background:var(--accent); }
+.logo .text { font-family:var(--serif); font-size:18px; font-weight:700; }
+.logo .text small { display:block; font-family:var(--mono); font-size:9px; letter-spacing:1.5px; color:var(--muted); font-weight:400; text-transform:uppercase; }
+nav { background:var(--cream-dark); padding:16px 32px; border-bottom:1px solid var(--line); }
+nav .container { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+nav a { font-family:var(--mono); font-size:11px; text-decoration:none; padding:6px 12px; border:1px solid var(--line); border-radius:4px; background:var(--paper); color:var(--ink); }
+nav a.active { background:var(--accent); color:var(--cream); }
+nav a:hover { background:var(--accent); color:var(--cream); border-color:var(--accent); }
+.hero { padding:80px 0 60px; }
+.hero .label { font-family:var(--mono); font-size:11px; letter-spacing:2px; color:var(--accent); text-transform:uppercase; margin-bottom:24px; }
+.hero h1 { font-family:var(--serif); font-size:56px; line-height:1.05; font-weight:700; }
+.hero h1 em { color:var(--accent); font-style:italic; }
+.hero p { font-size:17px; color:var(--muted); max-width:720px; margin-top:24px; line-height:1.7; }
+.section { padding:60px 0; border-top:1px solid var(--line); }
+.section h2 { font-family:var(--serif); font-size:36px; line-height:1.2; margin-bottom:8px; }
+.section h2 em { color:var(--accent); font-style:italic; }
+.section .desc { font-size:15px; color:var(--muted); max-width:640px; margin-bottom:32px; }
+table.vars { width:100%; border-collapse:collapse; background:var(--paper); border-radius:8px; overflow:hidden; border:1px solid var(--line); font-size:13px; }
+table.vars th { text-align:left; padding:14px 18px; font-family:var(--mono); font-size:10px; letter-spacing:1.5px; text-transform:uppercase; background:var(--cream-dark); color:var(--muted); font-weight:500; }
+table.vars td { padding:14px 18px; border-bottom:1px solid var(--line); vertical-align:top; }
+table.vars tr:last-child td { border-bottom:none; }
+table.vars code { font-family:var(--mono); font-size:12px; background:var(--accent-soft); padding:2px 6px; border-radius:3px; color:var(--ink); }
+table.vars .waterloo { font-family:var(--mono); font-size:12px; color:var(--ink); }
+.callout { background:var(--ink); color:var(--cream); padding:32px; border-radius:12px; margin-bottom:32px; }
+.callout h3 { font-family:var(--serif); font-size:24px; margin-bottom:12px; }
+.callout h3 em { color:var(--accent); font-style:italic; }
+.callout p { font-size:14px; opacity:0.85; line-height:1.7; }
+.callout code { font-family:var(--mono); background:rgba(255,255,255,0.08); padding:2px 6px; border-radius:3px; }
+footer.site { padding:60px 0 40px; border-top:1px solid var(--line); margin-top:80px; font-family:var(--mono); font-size:10px; letter-spacing:1.5px; color:var(--muted); text-transform:uppercase; }
+footer.site .container { display:flex; justify-content:space-between; }
+.breadcrumb { font-family:var(--mono); font-size:11px; letter-spacing:1px; color:var(--muted); text-transform:uppercase; padding:24px 0; }
+.breadcrumb a { color:var(--accent); text-decoration:none; }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="container">
+    <a href="index.html" style="text-decoration:none;color:inherit;"><div class="logo"><div class="dot"></div><div class="text">The RunRec<small>Email Marketing Pipeline</small></div></a>
+    </div>
+    <div style="font-family:var(--mono);font-size:10px;letter-spacing:1.5px;color:var(--accent);text-transform:uppercase;">▸ v1.1 · Post-QA</div>
+  </div>
+</header>
+
+<nav>
+  <div class="container">
+    <span style="font-family:var(--mono);font-size:10px;letter-spacing:2px;color:var(--accent);text-transform:uppercase;">▸ NAV</span>
+    <a href="index.html">Home</a>
+    <a href="principles.html">Principles</a>
+    <a href="journey.html">Journey</a>
+    <a href="forecasts.html">Forecasts</a>
+    <a href="franchise.html">Franchise</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="variables.html" class="active">Variables</a>
+  </div>
+</nav>
+
+<div class="container"><div class="breadcrumb"><a href="index.html">Home</a> · Variables Spec</div></div>
+
+<section class="hero">
+  <div class="container">
+    <div class="label">▸ The 10x Layer · Variables Spec</div>
+    <h1>Every <em>variable</em>.<br>Every <em>default</em>. Every <em>format</em>.</h1>
+    <p>The technical reference for everything that gets templatized when this system clones from Waterloo HQ to a new franchise. Eyad uses this when building in Klaviyo. Engineering uses this when wiring data sources. This is the spec that prevents "Hey ," emails and franchise-cloning disasters.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>The <em>fallback rule</em></h2>
+    <p class="desc">Every <code>{{variable}}</code> reference in actual Klaviyo templates must use Klaviyo's default-value syntax. The mockups show <code>{{first_name}}</code> for readability, but the production templates require fallbacks.</p>
+
+    <div class="callout">
+      <h3>Mockup vs. <em>production</em> template</h3>
+      <p>In the mockups: <code>Hey {{first_name}},</code></p>
+      <p>In the actual Klaviyo template: <code>Hey {{ first_name|default:'there' }},</code></p>
+      <p style="margin-top:12px;">Without the fallback, profiles signed up by phone, social, or any flow without a name will receive emails opening with "Hey ,". This is the single most-multiplied error if missed: every profile without a name × every email × every flow × every franchise location.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Profile <em>variables</em></h2>
+    <p class="desc">Customer-level data points referenced across flows. All require fallback defaults in production.</p>
+
+    <table class="vars">
+      <thead><tr><th>Variable</th><th>Source</th><th>Default</th><th>Format</th><th>Used in</th></tr></thead>
+      <tbody>
+        <tr><td><code>{{ first_name|default:'there' }}</code></td><td>Klaviyo profile</td><td><code>there</code></td><td>String</td><td>All flows</td></tr>
+        <tr><td><code>{{ last_name|default:'' }}</code></td><td>Klaviyo profile</td><td>empty</td><td>String</td><td>F09 B2B</td></tr>
+        <tr><td><code>{{ email }}</code></td><td>Klaviyo profile</td><td>required</td><td>Email</td><td>System</td></tr>
+        <tr><td><code>{{ phone_number|default:'' }}</code></td><td>Klaviyo profile</td><td>empty</td><td>E.164</td><td>SMS flows</td></tr>
+        <tr><td><code>{{ contact_name|default:'there' }}</code></td><td>Corporate inquiry form</td><td><code>there</code></td><td>String</td><td>F09</td></tr>
+        <tr><td><code>{{ parent_name|default:'there' }}</code></td><td>Birthday party booking</td><td><code>there</code></td><td>String</td><td>F05</td></tr>
+        <tr><td><code>{{ child_name|default:'your child' }}</code></td><td>Birthday party booking</td><td><code>your child</code></td><td>String</td><td>F05</td></tr>
+        <tr><td><code>{{ tier|default:'Common' }}</code></td><td>Stripe subscription</td><td><code>Common</code></td><td>String</td><td>F11</td></tr>
+        <tr><td><code>{{ player_type|default:'crew' }}</code></td><td>Click-set property (F01.T05)</td><td><code>crew</code></td><td>String</td><td>F01, F08</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Booking + event <em>variables</em></h2>
+    <p class="desc">Per-event data populated by Stripe webhooks and the Vercel/Supabase booking system.</p>
+
+    <table class="vars">
+      <thead><tr><th>Variable</th><th>Source</th><th>Format</th><th>Used in</th></tr></thead>
+      <tbody>
+        <tr><td><code>{{ sport }}</code></td><td>Booking metadata</td><td>basketball / volleyball / pickleball / badminton</td><td>F02, F03, F12</td></tr>
+        <tr><td><code>{{ court_letter }}</code></td><td>Booking metadata</td><td>A / B / C</td><td>F02</td></tr>
+        <tr><td><code>{{ booking_date }}</code></td><td>Booking metadata</td><td><code>{{date|date:"F j"}}</code> → "August 15"</td><td>F02</td></tr>
+        <tr><td><code>{{ booking_time }}</code></td><td>Booking metadata</td><td><code>{{time|time:"g:i A"}}</code> → "8:00 PM"</td><td>F02</td></tr>
+        <tr><td><code>{{ access_code }}</code></td><td>Kisi door system → Klaviyo</td><td>4-digit string</td><td>F02.T04</td></tr>
+        <tr><td><code>{{ booking_url }}</code></td><td>Static per location</td><td>URL</td><td>All flows</td></tr>
+        <tr><td><code>{{ resume_url }}</code></td><td>Per-cart token from Vercel</td><td>URL with token</td><td>F12</td></tr>
+        <tr><td><code>{{ referral_token }}</code></td><td>Per-profile generated</td><td>Random string (NOT first_name)</td><td>F07</td></tr>
+        <tr><td><code>{{ google_review_link }}</code></td><td>Static per location</td><td>URL</td><td>F03.T02</td></tr>
+        <tr><td><code>{{ anniversary_date }}</code></td><td>Computed from last_party_booking</td><td><code>{{date|date:"F j"}}</code></td><td>F05</td></tr>
+        <tr><td><code>{{ anniversary_date_month }}</code></td><td>Computed</td><td><code>{{date|date:"F"}}</code> → "August"</td><td>F05</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2><em>Location</em> variables (franchise readiness)</h2>
+    <p class="desc">Hard-coded today as Waterloo defaults. Every franchise location overrides these. This is the franchise-readiness layer — get these right and the entire system clones cleanly to 150 locations.</p>
+
+    <table class="vars">
+      <thead><tr><th>Variable</th><th>Waterloo default</th><th>Type</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><code>{{ LOCATION_NAME }}</code></td><td class="waterloo">The RunRec</td><td>String</td><td>Brand mark, used in body + footer</td></tr>
+        <tr><td><code>{{ LOCATION_ADDRESS }}</code></td><td class="waterloo">283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8</td><td>Postal address</td><td>CASL/CAN-SPAM mandatory in every email footer</td></tr>
+        <tr><td><code>{{ LOCATION_PHONE }}</code></td><td class="waterloo">+1 (519) 800-9894</td><td>E.164</td><td>SMS sender ID + signature lines</td></tr>
+        <tr><td><code>{{ LOCATION_HOURS }}</code></td><td class="waterloo">24/7/365</td><td>String</td><td>Most locations match</td></tr>
+        <tr><td><code>{{ COURT_A_PRICE }}</code></td><td class="waterloo">$89/hr</td><td>Currency</td><td>F01.T03, F08.T04, F09.T03 + math</td></tr>
+        <tr><td><code>{{ COURT_BC_PRICE }}</code></td><td class="waterloo">$45/hr</td><td>Currency</td><td>F01.T03 (basketball-only callout), F08.T04</td></tr>
+        <tr><td><code>{{ BIRTHDAY_HERO_PRICE }}</code></td><td class="waterloo">$499</td><td>Currency</td><td>F05.T04 packages list</td></tr>
+        <tr><td><code>{{ BIRTHDAY_SUPER_PRICE }}</code></td><td class="waterloo">$699</td><td>Currency</td><td>F05.T04</td></tr>
+        <tr><td><code>{{ BIRTHDAY_SUPER_FUN_PRICE }}</code></td><td class="waterloo">$899</td><td>Currency</td><td>F05.T04 (currently labeled "Best Value" on website)</td></tr>
+        <tr><td><code>{{ MEMBERSHIP_COMMON_PRICE }}</code></td><td class="waterloo">$89/mo</td><td>Currency</td><td>F10, F11</td></tr>
+        <tr><td><code>{{ MEMBERSHIP_FREQUENT_PRICE }}</code></td><td class="waterloo">$139/mo</td><td>Currency</td><td>F10, F11</td></tr>
+        <tr><td><code>{{ MEMBERSHIP_SUPER_PRICE }}</code></td><td class="waterloo">$359/mo</td><td>Currency</td><td>F10, F11</td></tr>
+        <tr><td><code>{{ CORPORATE_QUARTERLY_PRICE }}</code></td><td class="waterloo">$740 (3 hrs + coordinator)</td><td>Currency</td><td>F09</td></tr>
+        <tr><td><code>{{ CORPORATE_HOUR_RATE }}</code></td><td class="waterloo">$216 / additional hour</td><td>Currency</td><td>F09</td></tr>
+        <tr><td><code>{{ COORDINATOR_NAME }}</code></td><td class="waterloo">(varies per booking)</td><td>String</td><td>F02 if party booking. NOT a separate $99 SKU — built into birthday packages.</td></tr>
+        <tr><td><code>{{ SOCIAL_HANDLES }}</code></td><td class="waterloo">@therunrec (IG/FB/TikTok)</td><td>Strings</td><td>Footer links</td></tr>
+        <tr><td><code>{{ SENDER_NAME }}</code></td><td class="waterloo">The RunRec</td><td>String</td><td>From-name in all emails except Flow 09 (B2B uses Sal Dader directly)</td></tr>
+        <tr><td><code>{{ SENDER_EMAIL }}</code></td><td class="waterloo">contact@therunrec.com</td><td>Email</td><td>Per franchise: contact@{location}.therunrec.com or per-domain</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Click-property <em>wiring</em> spec</h2>
+    <p class="desc">Three flows use Klaviyo's <code>update_property_link</code> mechanic — clicks set profile properties, which trigger downstream segmentation and flows. <strong>If any of these are wired wrong, real customers get suppressed.</strong> Test all 3 before launch.</p>
+
+    <div class="callout">
+      <h3>F01.T05 + F08.T02 · 4-camp <em>self-segment</em></h3>
+      <p>Each "[click]" link in the 4-quadrant grid is wired to set <code>player_type</code>:</p>
+      <p style="margin-top:8px;"><code>{% update_property_link 'player_type' 'solo' 'https://therunrec.com/thank-you' %}</code></p>
+      <p><code>{% update_property_link 'player_type' 'crew' 'https://therunrec.com/thank-you' %}</code></p>
+      <p><code>{% update_property_link 'player_type' 'party' 'https://therunrec.com/thank-you' %}</code></p>
+      <p><code>{% update_property_link 'player_type' 'league' 'https://therunrec.com/thank-you' %}</code></p>
+      <p style="margin-top:12px;">Test path: open the email in preview → click each link → verify the <code>player_type</code> property is set on the test profile. If the property isn't writing, the click is doing nothing and the segmentation breaks.</p>
+    </div>
+
+    <div class="callout">
+      <h3>F13.T01 · sunset <em>permission</em></h3>
+      <p>"Click YES" link wires to <code>engagement_intent</code>:</p>
+      <p style="margin-top:8px;"><code>{% update_property_link 'engagement_intent' 'stay' 'https://therunrec.com/thanks-for-staying' %}</code></p>
+      <p>The "monthly only" PS link:</p>
+      <p style="margin-top:8px;"><code>{% update_property_link 'email_frequency' 'monthly' 'https://therunrec.com/preferences-saved' %}</code></p>
+      <p>The "unsubscribe" link is Klaviyo's standard <code>{% unsubscribe %}</code> token.</p>
+      <p style="margin-top:12px;"><strong>Critical:</strong> the auto-suppression rule (Day 14: anyone who hasn't clicked stays gets suppressed) must reference <code>engagement_intent != 'stay'</code> AND <code>email_frequency != 'monthly'</code>. If you suppress anyone with monthly intent, you delete real customers.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2><em>Coupon</em> generation</h2>
+    <p class="desc">Promo codes referenced in flows. Most need to be unique-per-profile to prevent code-sharing on Reddit.</p>
+
+    <table class="vars">
+      <thead><tr><th>Code</th><th>Flow</th><th>Type</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><code>BDAY-{{ unique_token }}</code></td><td>F04.T02 SMS</td><td>Single-use per profile</td><td>Use Klaviyo coupon generator. NOT BDAY-2026 (would be one shared code).</td></tr>
+        <tr><td><code>COMEBACK</code></td><td>F06.T02 email</td><td>Shared (1 per email)</td><td>Klaviyo enforces 1-use-per-profile via flow filter.</td></tr>
+        <tr><td><code>RETURN25</code></td><td>F06.T04, F06.T05</td><td>Shared (7-day window)</td><td>Same as above.</td></tr>
+        <tr><td><code>FIRST25</code></td><td>F08.T06, F08.T07</td><td>First-timers only</td><td>Filter on profile property: never_purchased=true.</td></tr>
+        <tr><td>(50% off rejoin)</td><td>F11.C2</td><td>Single-use per cancellation</td><td>Generated when subscription_cancelled event fires.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2><em>Engineering</em> dependencies</h2>
+    <p class="desc">Custom events / webhooks / data feeds the flows depend on. Document and build before launch.</p>
+
+    <table class="vars">
+      <thead><tr><th>Dependency</th><th>Flow</th><th>Status</th><th>Owner</th></tr></thead>
+      <tbody>
+        <tr><td><code>booking_abandoned</code> custom event from Vercel</td><td>F12 (entire flow)</td><td>NOT BUILT</td><td>Rob (Vercel/Supabase)</td></tr>
+        <tr><td>Live availability webhook (real scarcity check)</td><td>F03.T04, F12.T03</td><td>NOT BUILT</td><td>Rob</td></tr>
+        <tr><td>Similar bookings feed</td><td>F12.T02</td><td>NOT BUILT</td><td>Rob</td></tr>
+        <tr><td>Per-customer math API (booking_count, total_spent, savings calc)</td><td>F10.T01, F10.T03, F11.T04</td><td>NOT BUILT</td><td>Rob</td></tr>
+        <tr><td>Quarterly birthday data export from booking history</td><td>F04, F05</td><td>Manual quarterly</td><td>Eyad</td></tr>
+        <tr><td>SPF / DKIM / DMARC at <code>send.therunrec.com</code></td><td>All flows · deliverability</td><td>NOT SET UP</td><td>Rob (DNS)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer class="site"><div class="container"><div>▸ The RunRec · Email Marketing Pipeline · v1.1 · Post-QA</div><div>Variables Spec</div></div></footer>
+
+</body>
+</html>
