@@ -164,7 +164,7 @@ footer.site .container { display:flex; justify-content:space-between; }
         <tr><td><code>{{ CORPORATE_HOUR_RATE }}</code></td><td class="waterloo">$216 / additional hour</td><td>Currency</td><td>F09</td></tr>
         <tr><td><code>{{ COORDINATOR_NAME }}</code></td><td class="waterloo">(varies per booking)</td><td>String</td><td>F02 if party booking. NOT a separate $99 SKU — built into birthday packages.</td></tr>
         <tr><td><code>{{ SOCIAL_HANDLES }}</code></td><td class="waterloo">@therunrec (IG/FB/TikTok)</td><td>Strings</td><td>Footer links</td></tr>
-        <tr><td><code>{{ SENDER_NAME }}</code></td><td class="waterloo">The RunRec</td><td>String</td><td>From-name in all emails except Flow 09 (B2B uses Sal Dader directly)</td></tr>
+        <tr><td><code>{{ SENDER_NAME }}</code></td><td class="waterloo">The RunRec</td><td>String</td><td>From-name in all emails except Flow 09 (B2B uses {{location_manager}} directly)</td></tr>
         <tr><td><code>{{ SENDER_EMAIL }}</code></td><td class="waterloo">contact@therunrec.com</td><td>Email</td><td>Per franchise: contact@{location}.therunrec.com or per-domain</td></tr>
       </tbody>
     </table>
@@ -209,7 +209,7 @@ footer.site .container { display:flex; justify-content:space-between; }
         <tr><td><code>BDAY-{{ unique_token }}</code></td><td>F04.T02 SMS</td><td>Single-use per profile</td><td>Use Klaviyo coupon generator. NOT BDAY-2026 (would be one shared code).</td></tr>
         <tr><td><code>COMEBACK</code></td><td>F06.T02 email</td><td>Shared (1 per email)</td><td>Klaviyo enforces 1-use-per-profile via flow filter.</td></tr>
         <tr><td><code>RETURN25</code></td><td>F06.T04, F06.T05</td><td>Shared (7-day window)</td><td>Same as above.</td></tr>
-        <tr><td><code>FIRST25</code></td><td>F08.T06, F08.T07</td><td>First-timers only</td><td>Filter on profile property: never_purchased=true.</td></tr>
+        <tr><td><code>the offer</code></td><td>F08.T06, F08.T07</td><td>First-timers only</td><td>Filter on profile property: never_purchased=true.</td></tr>
         <tr><td>(50% off rejoin)</td><td>F11.C2</td><td>Single-use per cancellation</td><td>Generated when subscription_cancelled event fires.</td></tr>
       </tbody>
     </table>
