@@ -107,9 +107,9 @@ footer.site .container { display:flex; justify-content:space-between; }
         <tr><td><code>{{ email }}</code></td><td>Klaviyo profile</td><td>required</td><td>Email</td><td>System</td></tr>
         <tr><td><code>{{ phone_number|default:'' }}</code></td><td>Klaviyo profile</td><td>empty</td><td>E.164</td><td>SMS flows</td></tr>
         <tr><td><code>{{ contact_name|default:'there' }}</code></td><td>Corporate inquiry form</td><td><code>there</code></td><td>String</td><td>F09</td></tr>
-        <tr><td><code>{{ parent_name|default:'there' }}</code></td><td>Birthday party booking</td><td><code>there</code></td><td>String</td><td>F05</td></tr>
-        <tr><td><code>{{ child_name|default:'your child' }}</code></td><td>Birthday party booking</td><td><code>your child</code></td><td>String</td><td>F05</td></tr>
-        <tr><td><code>{{ tier|default:'Common' }}</code></td><td>Stripe subscription</td><td><code>Common</code></td><td>String</td><td>F11</td></tr>
+        <tr><td><code>{{ parent_name|default:'parent' }}</code></td><td>Birthday party booking</td><td><code>parent</code></td><td>String</td><td>F05</td></tr>
+        <tr><td><code>{% if child_name %}{{ child_name }}{% else %}your little one{% endif %}</code></td><td>Birthday party booking</td><td><code>your little one</code></td><td>Gate (Klaviyo doesn't chain profile fallbacks)</td><td>F05</td></tr>
+        <tr><td><code>{{ tier|default:'member' }}</code></td><td>Stripe subscription</td><td><code>member</code></td><td>String (lowercase per brand voice)</td><td>F11</td></tr>
         <tr><td><code>{{ player_type|default:'crew' }}</code></td><td>Click-set property (F01.T05)</td><td><code>crew</code></td><td>String</td><td>F01, F08</td></tr>
       </tbody>
     </table>
