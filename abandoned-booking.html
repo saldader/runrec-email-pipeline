@@ -226,6 +226,15 @@
   .panel-card.design-asset .da-note code { font-family: var(--mono); font-size: 11px; background: var(--cream-dark); padding: 1px 5px; border-radius: 3px; color: var(--ink); }
   .panel-card.design-asset .da-cta { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); padding: 8px 12px; border: 1px dashed var(--accent); border-radius: 4px; text-decoration: none; }
   .panel-card.design-asset .da-cta:hover { background: var(--accent); color: var(--cream); }
+  .panel-card.variables-spec { border-left: 3px solid var(--ink); background: rgba(0,0,0,0.03); }
+  .panel-card.variables-spec .label { color: var(--ink); }
+  .panel-card.variables-spec h4 { font-family: var(--mono); font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px; color: var(--ink); }
+  .panel-card.variables-spec .vars-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 14px; }
+  .panel-card.variables-spec .var-item { font-family: var(--mono); font-size: 11px; line-height: 1.5; }
+  .panel-card.variables-spec .var-syntax { display: block; color: var(--ink); background: var(--cream-dark); padding: 8px 10px; border-radius: 3px; word-break: break-word; white-space: pre-wrap; }
+  .panel-card.variables-spec .var-example { display: block; color: var(--ink-soft); margin-top: 6px; padding-left: 12px; font-style: italic; font-size: 11px; }
+  .panel-card.variables-spec .vars-note { font-size: 12px; color: var(--ink-soft); font-style: italic; line-height: 1.5; padding-top: 10px; border-top: 1px dashed rgba(0,0,0,0.15); margin-top: 4px; }
+  .panel-card.variables-spec .vars-note code { font-family: var(--mono); font-size: 11px; background: var(--cream-dark); padding: 1px 5px; border-radius: 3px; color: var(--ink); }
   .panel-stat-grid .stat { background: var(--cream-dark); padding: 12px; border-radius: 4px; }
   .panel-stat-grid .stat .l { font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; }
   .panel-stat-grid .stat .v { font-family: var(--serif); font-size: 20px; font-weight: 700; line-height: 1; margin-top: 4px; }
@@ -598,6 +607,41 @@
         </div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>PEAK INTENT</h4><p>1-hour window is when intent is highest. Show the cart, single resume click. Recovery rate spikes if sent within 60 minutes.</p></div>
         <div class="panel-card"><div class="label">▸ RPR target</div><p><strong>$3.65 average · $28.89 top 10%</strong>. Highest-RPR flow in the system. Single biggest revenue leak when missing.</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{{ sport|default:'the court' }}</span>
+            <span class="var-example">→ "the court" if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if court_letter %}{{ court_letter }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if date %}{{ date }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if time %}{{ time }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ first_name|default:'there' }}</span>
+            <span class="var-example">→ "Hey there," if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if total %}${{ total }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing (booking total)</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ resume_url|default:'https://therunrec.com' }}</span>
+            <span class="var-example">→ https://therunrec.com if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -630,6 +674,45 @@
           <a class="da-cta" href="https://drive.google.com/drive/folders/1x3b7eCEg0826rzo3laNLbyinHWh-GqLH" target="_blank" rel="noopener">📂 Open 12-Abandoned-Booking folder · Upload here</a>
         </div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>REASSURE</h4><p>Light social proof. "Only one person can book each" plays to exclusivity without pressure.</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{{ first_name|default:'there' }}</span>
+            <span class="var-example">→ "Hey there," if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ sport|default:'the court' }}</span>
+            <span class="var-example">→ "the court" if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if date %}{{ date }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if time %}{{ time }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if similar_booking_1 %}{{ similar_booking_1 }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if similar_booking_2 %}{{ similar_booking_2 }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if similar_booking_3 %}{{ similar_booking_3 }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ resume_url|default:'https://therunrec.com' }}</span>
+            <span class="var-example">→ https://therunrec.com if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -641,6 +724,25 @@
       <div class="side-panel">
         <div class="panel-card"><div class="label">▸ Conditional fire</div><p>Webhook checks live availability before sending. Only fires if slot is still genuinely open. Real scarcity, never fake.</p></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>REAL SCARCITY</h4><p>Hormozi: scarcity only works when it's true. The slot really is still available; the message is honest.</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{{ sport|default:'the court' }}</span>
+            <span class="var-example">→ "the court" if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if time %}{{ time }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ token|default:'' }}</span>
+            <span class="var-example">→ blank string if missing (tracking-only)</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>

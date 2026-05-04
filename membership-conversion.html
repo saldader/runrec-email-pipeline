@@ -226,6 +226,15 @@
   .panel-card.design-asset .da-note code { font-family: var(--mono); font-size: 11px; background: var(--cream-dark); padding: 1px 5px; border-radius: 3px; color: var(--ink); }
   .panel-card.design-asset .da-cta { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); padding: 8px 12px; border: 1px dashed var(--accent); border-radius: 4px; text-decoration: none; }
   .panel-card.design-asset .da-cta:hover { background: var(--accent); color: var(--cream); }
+  .panel-card.variables-spec { border-left: 3px solid var(--ink); background: rgba(0,0,0,0.03); }
+  .panel-card.variables-spec .label { color: var(--ink); }
+  .panel-card.variables-spec h4 { font-family: var(--mono); font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px; color: var(--ink); }
+  .panel-card.variables-spec .vars-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 14px; }
+  .panel-card.variables-spec .var-item { font-family: var(--mono); font-size: 11px; line-height: 1.5; }
+  .panel-card.variables-spec .var-syntax { display: block; color: var(--ink); background: var(--cream-dark); padding: 8px 10px; border-radius: 3px; word-break: break-word; white-space: pre-wrap; }
+  .panel-card.variables-spec .var-example { display: block; color: var(--ink-soft); margin-top: 6px; padding-left: 12px; font-style: italic; font-size: 11px; }
+  .panel-card.variables-spec .vars-note { font-size: 12px; color: var(--ink-soft); font-style: italic; line-height: 1.5; padding-top: 10px; border-top: 1px dashed rgba(0,0,0,0.15); margin-top: 4px; }
+  .panel-card.variables-spec .vars-note code { font-family: var(--mono); font-size: 11px; background: var(--cream-dark); padding: 1px 5px; border-radius: 3px; color: var(--ink); }
   .panel-stat-grid .stat { background: var(--cream-dark); padding: 12px; border-radius: 4px; }
   .panel-stat-grid .stat .l { font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; }
   .panel-stat-grid .stat .v { font-family: var(--serif); font-size: 20px; font-weight: 700; line-height: 1; margin-top: 4px; }
@@ -603,6 +612,33 @@
         <div class="panel-card"><div class="label">▸ Image direction</div><h4>Real numbers · clean visualization</h4><p>Personalized bar chart or styled number layout. The math IS the visual. Brand-aligned colors only.</p></div>
         <div class="panel-card"><div class="label">▸ Specs</div><ul><li>Variables: 5 (spend, count, days, avg, savings)</li><li>Klaviyo dynamic blocks for math</li><li>PS handles "is this for me?" objection</li></ul></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>REVEAL</h4><p>Personalized math beats abstract pitch. Their own numbers shown back to them.</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{{ first_name|default:'there' }}</span>
+            <span class="var-example">→ "Hey there," if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ booking_count|default:'a' }}</span>
+            <span class="var-example">→ "a" if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ days|default:'a few days' }}</span>
+            <span class="var-example">→ "a few days" if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if total_spent %}{{ total_spent }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ math_breakdown_url|default:'https://therunrec.com' }}</span>
+            <span class="var-example">→ https://therunrec.com if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -635,6 +671,21 @@
           <a class="da-cta" href="https://drive.google.com/drive/folders/1-meM2hzOgFeXGFeTh0vYGgsxh0tHw6eR" target="_blank" rel="noopener">📂 Open 10-Membership-Conversion folder · Upload here</a>
         </div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>ASYMMETRY</h4><p>Hormozi: stack the value. Highlight #1 (priority booking) as the real differentiator.</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{{ first_name|default:'there' }}</span>
+            <span class="var-example">→ "Hey there," if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ tiers_url|default:'https://therunrec.com' }}</span>
+            <span class="var-example">→ https://therunrec.com if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -669,6 +720,25 @@
           <a class="da-cta" href="https://drive.google.com/drive/folders/1-meM2hzOgFeXGFeTh0vYGgsxh0tHw6eR" target="_blank" rel="noopener">📂 Open 10-Membership-Conversion folder · Upload here</a>
         </div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>PROOF</h4><p>Real member, real math, real numbers. PS offers direct introduction (highest-converting move for fence-sitters).</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{{ name|default:'there' }}</span>
+            <span class="var-example">→ "Hey there," if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ first_name|default:'there' }}</span>
+            <span class="var-example">→ "Hey there," if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ tiers_url|default:'https://therunrec.com' }}</span>
+            <span class="var-example">→ https://therunrec.com if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>

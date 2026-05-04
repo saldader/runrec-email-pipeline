@@ -226,6 +226,15 @@
   .panel-card.design-asset .da-note code { font-family: var(--mono); font-size: 11px; background: var(--cream-dark); padding: 1px 5px; border-radius: 3px; color: var(--ink); }
   .panel-card.design-asset .da-cta { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); padding: 8px 12px; border: 1px dashed var(--accent); border-radius: 4px; text-decoration: none; }
   .panel-card.design-asset .da-cta:hover { background: var(--accent); color: var(--cream); }
+  .panel-card.variables-spec { border-left: 3px solid var(--ink); background: rgba(0,0,0,0.03); }
+  .panel-card.variables-spec .label { color: var(--ink); }
+  .panel-card.variables-spec h4 { font-family: var(--mono); font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px; color: var(--ink); }
+  .panel-card.variables-spec .vars-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 14px; }
+  .panel-card.variables-spec .var-item { font-family: var(--mono); font-size: 11px; line-height: 1.5; }
+  .panel-card.variables-spec .var-syntax { display: block; color: var(--ink); background: var(--cream-dark); padding: 8px 10px; border-radius: 3px; word-break: break-word; white-space: pre-wrap; }
+  .panel-card.variables-spec .var-example { display: block; color: var(--ink-soft); margin-top: 6px; padding-left: 12px; font-style: italic; font-size: 11px; }
+  .panel-card.variables-spec .vars-note { font-size: 12px; color: var(--ink-soft); font-style: italic; line-height: 1.5; padding-top: 10px; border-top: 1px dashed rgba(0,0,0,0.15); margin-top: 4px; }
+  .panel-card.variables-spec .vars-note code { font-family: var(--mono); font-size: 11px; background: var(--cream-dark); padding: 1px 5px; border-radius: 3px; color: var(--ink); }
   .panel-stat-grid .stat { background: var(--cream-dark); padding: 12px; border-radius: 4px; }
   .panel-stat-grid .stat .l { font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; }
   .panel-stat-grid .stat .v { font-family: var(--serif); font-size: 20px; font-weight: 700; line-height: 1; margin-top: 4px; }
@@ -598,6 +607,33 @@
         <div class="panel-card"><div class="label">▸ Image direction</div><h4>Text-forward · transactional</h4><p>This is a confirmation, not a promo. Treat it as a receipt with personality. Clean styled detail block, brand color accents only.</p></div>
         <div class="panel-card"><div class="label">▸ Specs</div><ul><li>Template: <strong>Transactional</strong></li><li>Word count: <strong>78 words</strong></li><li>Variables: 6</li><li>Reply-to: contact@</li></ul></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>FRAME</h4><p>Highest-open email in the system — earn its weight. Logistics + soft upsell prompt. PS handles the conversion ask.</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{{ first_name|default:'there' }}</span>
+            <span class="var-example">→ "Hey there," if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ sport|default:'the court' }}</span>
+            <span class="var-example">→ "the court" if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if court_letter %}{{ court_letter }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if date %}{{ date }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if time %}{{ time }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -613,6 +649,29 @@
       <div class="side-panel">
         <div class="panel-card"><div class="label">▸ Tone</div><ul><li>Personalized first name</li><li>Confirms key details one more time</li><li>Tells them to expect the day-of code</li><li>Sender ID: RunRec</li><li>Under 160 chars</li></ul></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>ANCHOR</h4><p>Establishes SMS as the fast / reliable channel — primes them to look for the day-of texts.</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{{ first_name|default:'there' }}</span>
+            <span class="var-example">→ "Hey there," if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if date %}{{ date }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if time %}{{ time }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if court_letter %}{{ court_letter }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -651,6 +710,17 @@
         <div class="panel-card"><div class="label">▸ Image direction</div><h4>Inline icons only</h4><p>Three small icons (32px) inline with the numbered list. Brand-aligned line art. No header image — feels like a friend's text.</p></div>
         <div class="panel-card"><div class="label">▸ Specs</div><ul><li>Template: Flow / Personal</li><li>Word count: <strong>92 words</strong></li><li>Format: numbered list</li></ul></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>REDUCE FRICTION</h4><p>Detail signals premium. The Bluetooth tip is a callback to the Welcome flow Day 3 (continuity).</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{% if time %}{{ time }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -667,6 +737,17 @@
         <div class="panel-card"><div class="label">▸ Tone</div><ul><li>Pinpoint timing reads as premium</li><li>Door code in the message itself</li><li>Single emoji</li><li>Under 60 characters</li></ul></div>
         <div class="panel-card"><div class="label">▸ Impact</div><p><strong>Reduces no-shows by 20–30% on its own.</strong> The $19/mo per location SMS cost pays for itself in the first 5 saved no-shows.</p></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>PRECISION</h4><p>The high-stakes touch. Pinpoint timing.</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{% if court_letter %}{{ court_letter }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>

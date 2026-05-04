@@ -226,6 +226,15 @@
   .panel-card.design-asset .da-note code { font-family: var(--mono); font-size: 11px; background: var(--cream-dark); padding: 1px 5px; border-radius: 3px; color: var(--ink); }
   .panel-card.design-asset .da-cta { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); padding: 8px 12px; border: 1px dashed var(--accent); border-radius: 4px; text-decoration: none; }
   .panel-card.design-asset .da-cta:hover { background: var(--accent); color: var(--cream); }
+  .panel-card.variables-spec { border-left: 3px solid var(--ink); background: rgba(0,0,0,0.03); }
+  .panel-card.variables-spec .label { color: var(--ink); }
+  .panel-card.variables-spec h4 { font-family: var(--mono); font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px; color: var(--ink); }
+  .panel-card.variables-spec .vars-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 14px; }
+  .panel-card.variables-spec .var-item { font-family: var(--mono); font-size: 11px; line-height: 1.5; }
+  .panel-card.variables-spec .var-syntax { display: block; color: var(--ink); background: var(--cream-dark); padding: 8px 10px; border-radius: 3px; word-break: break-word; white-space: pre-wrap; }
+  .panel-card.variables-spec .var-example { display: block; color: var(--ink-soft); margin-top: 6px; padding-left: 12px; font-style: italic; font-size: 11px; }
+  .panel-card.variables-spec .vars-note { font-size: 12px; color: var(--ink-soft); font-style: italic; line-height: 1.5; padding-top: 10px; border-top: 1px dashed rgba(0,0,0,0.15); margin-top: 4px; }
+  .panel-card.variables-spec .vars-note code { font-family: var(--mono); font-size: 11px; background: var(--cream-dark); padding: 1px 5px; border-radius: 3px; color: var(--ink); }
   .panel-stat-grid .stat { background: var(--cream-dark); padding: 12px; border-radius: 4px; }
   .panel-stat-grid .stat .l { font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; }
   .panel-stat-grid .stat .v { font-family: var(--serif); font-size: 20px; font-weight: 700; line-height: 1; margin-top: 4px; }
@@ -601,6 +610,21 @@
         <div class="panel-card"><div class="label">▸ Image direction</div><h4>Premium dark · status mark</h4><p>VIP template. Dark accent. Should feel different from every other RunRec email — premium, exclusive.</p></div>
         <div class="panel-card"><div class="label">▸ Specs</div><ul><li>Template: <strong>VIP / Status</strong></li><li>Word count: <strong>106 words</strong></li><li>Zero ask · pure recognition</li></ul></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>NO ASK</h4><p>Status, not stuff. Brunson Attractive Character. Hormozi high-status / low-ask.</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{{ first_name|default:'there' }}</span>
+            <span class="var-example">→ "Hey there," if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ location_manager|default:'RunRec Team' }}</span>
+            <span class="var-example">→ "RunRec Team" if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -635,6 +659,37 @@
         </div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>REINFORCE</h4><p>Reinforces VIP frame before any ask. Brunson: identity comes before action.</p></div>
         <div class="panel-card"><div class="label">▸ When to fire</div><p>Only fires when there's a real new program / event to drop. Otherwise skipped — don't manufacture exclusivity.</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{{ new_program_name|default:'the new program' }}</span>
+            <span class="var-example">→ "the new program" if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if date %}{{ date }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ first_name|default:'there' }}</span>
+            <span class="var-example">→ "Hey there," if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ launch_date|default:'soon' }}</span>
+            <span class="var-example">→ "soon" if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ launch_date_plus_5|default:'shortly after' }}</span>
+            <span class="var-example">→ "shortly after" if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ program_details_url|default:'https://therunrec.com' }}</span>
+            <span class="var-example">→ https://therunrec.com if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -661,6 +716,21 @@
       <div class="side-panel">
         <div class="panel-card"><div class="label">▸ The hook</div><h4>"You get nothing in return"</h4><p>Counter-positioning against every gym referral program. The reward IS the friend playing here. Authenticity.</p></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>EARNED ASK</h4><p>Two value sends already deposited (Status + Insider Drop). Ask now lands as natural, not transactional.</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{{ first_name|default:'there' }}</span>
+            <span class="var-example">→ "Hey there," if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ referral_link|default:'https://therunrec.com/refer' }}</span>
+            <span class="var-example">→ https://therunrec.com/refer if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -672,6 +742,17 @@
       <div class="side-panel">
         <div class="panel-card"><div class="label">▸ Tone</div><ul><li>Casual phrasing</li><li>Personalized link</li><li>One-tap forward</li><li>Texts share better than emails forward</li></ul></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>FRICTIONLESS</h4><p>Cheapest acquisition channel that exists. Friend-to-friend texts convert at 5-8× rate of cold outreach.</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{{ first_name|default:'there' }}</span>
+            <span class="var-example">→ "Hey there," if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -705,6 +786,25 @@
         </div>
         <div class="panel-card"><div class="label">▸ Recurrence</div><p>Fires every quarter as long as the profile stays in the VIP segment. Auto re-evaluates eligibility before send.</p></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>MAINTAIN</h4><p>Keeps VIPs in the tent. Status reminder + first-mover advantage.</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{{ first_name|default:'there' }}</span>
+            <span class="var-example">→ "Hey there," if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ drop_url|default:'https://therunrec.com' }}</span>
+            <span class="var-example">→ https://therunrec.com if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if previous_event %}{{ previous_event }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>

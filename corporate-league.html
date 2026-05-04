@@ -226,6 +226,15 @@
   .panel-card.design-asset .da-note code { font-family: var(--mono); font-size: 11px; background: var(--cream-dark); padding: 1px 5px; border-radius: 3px; color: var(--ink); }
   .panel-card.design-asset .da-cta { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); padding: 8px 12px; border: 1px dashed var(--accent); border-radius: 4px; text-decoration: none; }
   .panel-card.design-asset .da-cta:hover { background: var(--accent); color: var(--cream); }
+  .panel-card.variables-spec { border-left: 3px solid var(--ink); background: rgba(0,0,0,0.03); }
+  .panel-card.variables-spec .label { color: var(--ink); }
+  .panel-card.variables-spec h4 { font-family: var(--mono); font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px; color: var(--ink); }
+  .panel-card.variables-spec .vars-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 14px; }
+  .panel-card.variables-spec .var-item { font-family: var(--mono); font-size: 11px; line-height: 1.5; }
+  .panel-card.variables-spec .var-syntax { display: block; color: var(--ink); background: var(--cream-dark); padding: 8px 10px; border-radius: 3px; word-break: break-word; white-space: pre-wrap; }
+  .panel-card.variables-spec .var-example { display: block; color: var(--ink-soft); margin-top: 6px; padding-left: 12px; font-style: italic; font-size: 11px; }
+  .panel-card.variables-spec .vars-note { font-size: 12px; color: var(--ink-soft); font-style: italic; line-height: 1.5; padding-top: 10px; border-top: 1px dashed rgba(0,0,0,0.15); margin-top: 4px; }
+  .panel-card.variables-spec .vars-note code { font-family: var(--mono); font-size: 11px; background: var(--cream-dark); padding: 1px 5px; border-radius: 3px; color: var(--ink); }
   .panel-stat-grid .stat { background: var(--cream-dark); padding: 12px; border-radius: 4px; }
   .panel-stat-grid .stat .l { font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; }
   .panel-stat-grid .stat .v { font-family: var(--serif); font-size: 20px; font-weight: 700; line-height: 1; margin-top: 4px; }
@@ -593,6 +602,21 @@
       <div class="side-panel">
         <div class="panel-card"><div class="label">▸ Sender note</div><p>Sent from <strong>{{location_manager}}@therunrec.com</strong>, not contact@. B2B feels more personal when from a real person, not a generic inbox.</p></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>SPEED WINS</h4><p>Speed of first reply correlates directly with B2B close rate. Templated but warm.</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{{ contact_name|default:'there' }}</span>
+            <span class="var-example">→ "Hey there," if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ calendar_link|default:'https://therunrec.com/book' }}</span>
+            <span class="var-example">→ https://therunrec.com/book if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -638,6 +662,21 @@
         </div>
         <div class="panel-card"><div class="label">▸ Image direction</div><h4>Real corporate event photo</h4><p>Permission-required. Show actual group on court. Authentic > stock.</p></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>PRECEDENT</h4><p>B2B buyers don't decide alone. Give them content they can forward internally.</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{{ example_company|default:'your team' }}</span>
+            <span class="var-example">→ "your team" if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ contact_name|default:'there' }}</span>
+            <span class="var-example">→ "Hey there," if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -672,6 +711,17 @@
           <a class="da-cta" href="https://drive.google.com/drive/folders/1D0P1p-DC4n1SamZbZTzs6hoEK27S1IhC" target="_blank" rel="noopener">📂 Open 09-Corporate-League folder · Upload here</a>
         </div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>CHOICE FRAME</h4><p>"Which one" reframe — beats yes/no. Hormozi: never let them choose between you and nothing.</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{{ contact_name|default:'there' }}</span>
+            <span class="var-example">→ "Hey there," if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -708,6 +758,21 @@
       </div>
       <div class="side-panel">
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>DECISION-FORCE</h4><p>Hormozi closer. Gets responses where 5 polite follow-ups don't. The "no" is acceptable — silence isn't.</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{{ contact_name|default:'there' }}</span>
+            <span class="var-example">→ "Hey there," if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ quarter|default:'this quarter' }}</span>
+            <span class="var-example">→ "this quarter" if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -731,6 +796,25 @@
       </div>
       <div class="side-panel">
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>LONG GAME</h4><p>The "no" today is rarely a "no" forever. Sets up clean 90-day re-engagement window.</p></div>
+            <div class="panel-card variables-spec">
+        <div class="label">▸ Variables · this touch</div>
+        <h4>{ } Merge tags · paste-ready</h4>
+        <div class="vars-list">
+          <div class="var-item">
+            <span class="var-syntax">{{ contact_name|default:'there' }}</span>
+            <span class="var-example">→ "Hey there," if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ location_manager|default:'RunRec Team' }}</span>
+            <span class="var-example">→ "RunRec Team" if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{{ location_phone|default:'519-800-9894' }}</span>
+            <span class="var-example">→ "519-800-9894" if missing</span>
+          </div>
+        </div>
+        <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
+      </div>
       </div>
     </div>
   </section>
