@@ -799,6 +799,10 @@
             <span class="var-syntax">{% if renewal_date %}{{ renewal_date }}{% endif %}</span>
             <span class="var-example">→ line hidden if missing</span>
           </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if would_have_cost %}${{ would_have_cost }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing (currency)</span>
+          </div>
         </div>
         <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
       </div>
@@ -865,6 +869,14 @@
           <div class="var-item">
             <span class="var-syntax">{{ next_quarter|default:'this quarter' }}</span>
             <span class="var-example">→ "this quarter" if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if upgrade_cost %}${{ upgrade_cost }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing (currency)</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% if upcoming_perks %}{{ upcoming_perks }}{% endif %}</span>
+            <span class="var-example">→ line hidden if missing (list)</span>
           </div>
         </div>
         <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>

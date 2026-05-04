@@ -611,11 +611,15 @@
           </div>
           <div class="var-item">
             <span class="var-syntax">{% manage_preferences %}</span>
-            <span class="var-example">→ Klaviyo's manage_preferences tag (built-in)</span>
+            <span class="var-example">→ Klaviyo built-in. Replaces the {{stay_subscribed_url}} placeholder. Loads the preference center.</span>
           </div>
           <div class="var-item">
             <span class="var-syntax">{{ monthly_only_url|default:'https://therunrec.com' }}</span>
             <span class="var-example">→ https://therunrec.com if missing</span>
+          </div>
+          <div class="var-item">
+            <span class="var-syntax">{% unsubscribe %}</span>
+            <span class="var-example">→ Klaviyo built-in. Replaces the {{unsubscribe_url}} placeholder. Required by CAN-SPAM/CASL.</span>
           </div>
         </div>
         <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
@@ -655,7 +659,7 @@
           </div>
           <div class="var-item">
             <span class="var-syntax">{% manage_preferences %}</span>
-            <span class="var-example">→ Klaviyo's manage_preferences tag (built-in)</span>
+            <span class="var-example">→ Klaviyo built-in. Replaces the {{stay_subscribed_url}} placeholder. Loads the preference center.</span>
           </div>
         </div>
         <p class="vars-note"><strong>Rammah:</strong> paste these into Klaviyo exactly as shown. Fallbacks are pre-built — do not modify the syntax. Verify in preview using a test profile <em>without</em> the variable populated.</p>
