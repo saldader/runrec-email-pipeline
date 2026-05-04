@@ -140,11 +140,6 @@
   }
   .email-image-block.text-only::before { display: none; }
   .email-image-block .img-desc { font-family: var(--sans); font-size: 13px; line-height: 1.5; color: rgba(255,255,255,0.85); text-transform: none; letter-spacing: 0; max-width: 480px; margin: 0 auto; font-style: italic; }
-  .email-image-block .design-tag { font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); padding: 5px 0 5px 10px; border-left: 2px solid var(--accent); margin: 0 auto 10px auto; max-width: 480px; display: flex; align-items: center; gap: 6px; font-weight: 600; }
-  .design-tag-sep { opacity: 0.45; }
-  .design-tag-status.pending { color: var(--accent); }
-  .design-tag-status.uploaded { color: #22c55e; }
-  .design-tag-icon { font-size: 13px; line-height: 1; }
   .email-body { padding: 32px; font-size: 15px; line-height: 1.7; color: var(--ink); }
   .email-body p { margin-bottom: 14px; }
   .email-body p.signature { margin-top: 24px; color: var(--ink); font-style: italic; }
@@ -219,6 +214,16 @@
     flex-shrink: 0;
   }
   .panel-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+  .panel-card.design-asset { border-left: 3px solid var(--accent); background: var(--accent-soft); position: relative; }
+  .panel-card.design-asset .label { color: var(--accent); }
+  .panel-card.design-asset h4 { font-family: var(--mono); font-size: 14px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+  .panel-card.design-asset .da-meta { font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-soft); margin: 4px 0 12px 0; line-height: 1.7; }
+  .panel-card.design-asset .da-meta strong { color: var(--ink); }
+  .panel-card.design-asset .da-meta .status-pending { color: var(--accent); font-weight: 700; }
+  .panel-card.design-asset .da-meta .status-uploaded { color: #22c55e; font-weight: 700; }
+  .panel-card.design-asset .da-note { font-size: 12px; color: var(--ink-soft); font-style: italic; line-height: 1.5; margin-bottom: 14px; }
+  .panel-card.design-asset .da-cta { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); padding: 8px 12px; border: 1px dashed var(--accent); border-radius: 4px; text-decoration: none; }
+  .panel-card.design-asset .da-cta:hover { background: var(--accent); color: var(--cream); }
   .panel-stat-grid .stat { background: var(--cream-dark); padding: 12px; border-radius: 4px; }
   .panel-stat-grid .stat .l { font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; }
   .panel-stat-grid .stat .v { font-family: var(--serif); font-size: 20px; font-weight: 700; line-height: 1; margin-top: 4px; }
@@ -607,7 +612,6 @@
       <div class="email-subject">What you just signed up for.</div>
       <div class="email-preview-text">24/7 private courts. No staff. No crowds. Just play.</div>
       <div class="email-image-block">
-        <div class="design-tag"><span class="design-tag-icon">🎨</span><span class="design-tag-owner">EYAD</span><span class="design-tag-sep">·</span><span class="design-tag-id">01-T1-hero</span><span class="design-tag-sep">·</span><span class="design-tag-status pending">⬜ PENDING</span></div>
         <div class="img-desc">Wide-angle hero shot of empty Court A at 11pm — overhead lights on, basketball at center court, no people. Slightly moody, warm tones. Logo bottom right.</div>
       </div>
       <div class="email-body">
@@ -627,6 +631,13 @@
     </div>
 
     <div class="side-panel">
+      <div class="panel-card design-asset">
+        <div class="label">▸ Design asset · pending</div>
+        <h4>🎨 01-T1-hero</h4>
+        <div class="da-meta"><strong>Owner:</strong> Eyad &nbsp;·&nbsp; <strong>Status:</strong> <span class="status-pending">⬜ Not yet uploaded</span></div>
+        <p class="da-note">Rammah: do not build this email until Eyad has uploaded the design asset.</p>
+        <a class="da-cta" href="#">📤 Upload destination · TBD (Phase B)</a>
+      </div>
       <div class="panel-card">
         <div class="label">▸ Image direction</div>
         <h4>Empty court · 11pm · warm</h4>
