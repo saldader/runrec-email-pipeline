@@ -1,0 +1,25 @@
+{
+  "_comment": "Source of truth for Drive folder URLs per flow. Used to wire dashboard design-asset cards. Master folder created 2026-05-04 in contact@therunrec.com Drive.",
+  "_last_updated": "2026-05-04",
+  "master": {
+    "name": "RunRec Email FLOWS",
+    "url": "https://drive.google.com/drive/folders/1wE3tNnHLq2JP2Kg_cGm_zKPJa-Oa_PBh",
+    "shared_with": ["a.eyad@therunrec.com (Editor)", "contact@therunrec.com (Owner — Rammah uses this)"],
+    "general_access": "TBD — operator to confirm"
+  },
+  "subfolders": {
+    "01-Welcome":              "https://drive.google.com/drive/folders/1yosFLH2iMwunvRVGEq0VY9PR74uIuGef",
+    "02-Booking-Confirm":      "https://drive.google.com/drive/folders/1Tv3eWEC9UpICcJqxHkqx-UbrQaFG22GV",
+    "03-Post-Session":         "https://drive.google.com/drive/folders/1L6iqEe55ZBxvt8MagerByOId8YkUSTmX",
+    "04-Customer-Birthday":    "https://drive.google.com/drive/folders/1JUWjmH-P4_zBHsQ4q9TQ5r3AvnXzW6FJ",
+    "05-Birthday-Anniversary": "https://drive.google.com/drive/folders/1dle2W7KHrmajXGJP22u4c4gXqRUEdYQl",
+    "06-Win-Back":             "https://drive.google.com/drive/folders/1JwxQSVgZmojL68Qaga2gw-Xeibs1TMeI",
+    "07-VIP-Referral":         "https://drive.google.com/drive/folders/14KWfEgHijIszaIN64hb01MqBkskzE_5f",
+    "08-Lead-Nurture":         "https://drive.google.com/drive/folders/1uMy4WUShd7kngtYS_v3Qi_k7aCETVj5i",
+    "09-Corporate-League":     "https://drive.google.com/drive/folders/1D0P1p-DC4n1SamZbZTzs6hoEK27S1IhC",
+    "10-Membership-Conversion":"https://drive.google.com/drive/folders/1-meM2hzOgFeXGFeTh0vYGgsxh0tHw6eR",
+    "11-Membership-Lifecycle": "https://drive.google.com/drive/folders/1EG8u_lJsJxw5yLqJWlF1_77n4DEKdPw7",
+    "12-Abandoned-Booking":    "https://drive.google.com/drive/folders/1x3b7eCEg0826rzo3laNLbyinHWh-GqLH",
+    "13-Sunset-Hygiene":       "https://drive.google.com/drive/folders/122tGn497ETH4YB_gK9RYrP022zIStIPm"
+  }
+}
