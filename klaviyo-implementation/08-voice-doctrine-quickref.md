@@ -71,9 +71,11 @@ Per-flow sender addresses. From: header configuration in Klaviyo.
 `{{location_manager}}` and `{{location_manager}}@therunrec.com` are **profile properties**, not literal text. Klaviyo will substitute them per-recipient based on their `location_manager` and `location_manager_email` profile properties.
 
 For the Waterloo HQ rollout (only location currently active), set the default values to:
-- `location_manager` = "Sal"
-- `location_manager_email` = "sal@therunrec.com"
+- `location_manager` = "The RunRec Team"
+- `location_manager_email` = "contact@therunrec.com"
 - `location_phone` = "519-800-9894"
+
+> **Operator directive (2026-05-04):** The personal work email is never used as a customer-facing default in any merge tag, fallback, example, or admin doc. Always `contact@therunrec.com`.
 
 Future locations populate per their own manager.
 

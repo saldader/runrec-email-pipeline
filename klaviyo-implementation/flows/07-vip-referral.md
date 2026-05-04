@@ -150,7 +150,7 @@ This touch is the most important in the flow because it establishes the multi-lo
 9. Save.
 
 **The {{location_manager}} merge tag — what it does and why it matters:**
-- For Waterloo (HQ): `location_manager = "Sal"`, `location_manager_email = "sal@therunrec.com"`. The email reads as "from Sal — Sal" — the local face that the customer would actually meet.
+- For Waterloo (HQ): `location_manager = "The RunRec Team"`, `location_manager_email = "contact@therunrec.com"`. The email reads as "from The RunRec Team" — the brand voice every Waterloo customer sees.
 - For a future Burlington franchise: `location_manager = "Jamie"`, `location_manager_email = "jamie@therunrec.com"`. The same email reads as "from Jamie — Jamie" — the LOCAL franchisee, not Sal in Waterloo.
 - This is the franchise-cloning pivot. Without these merge tags, every franchise would have to rebuild this flow from scratch with their own copy. With these merge tags, the flow is location-agnostic.
 
@@ -300,12 +300,12 @@ If going with option (a) or (c), make sure the recurrence stops if the profile d
 
 ## Test plan
 
-1. Create a test profile. Set `location_manager = "Sal"`, `location_manager_email = "sal@therunrec.com"`, and add 5 fake `Successfully Paid` events in the last 90 days (or manually add to the VIP / Power User segment).
+1. Create a test profile. Set `location_manager = "The RunRec Team"`, `location_manager_email = "contact@therunrec.com"`, and add 5 fake `Successfully Paid` events in the last 90 days (or manually add to the VIP / Power User segment).
 2. Touch 01 should fire within hours. Verify:
-   - From label resolves to `Sal` (or whatever the manager is)
-   - From email resolves to `sal@therunrec.com`
-   - Body signature resolves to `— Sal`
-   - The "direct line" email line in the body resolves to `sal@therunrec.com`
+   - From label resolves to `The RunRec Team` (or whatever the manager is)
+   - From email resolves to `contact@therunrec.com`
+   - Body signature resolves to `— The RunRec Team`
+   - The "direct line" email line in the body resolves to `contact@therunrec.com`
 3. Test the multi-location pivot: change the profile to `location_manager = "Jamie"`, `location_manager_email = "jamie@therunrec.com"`, then re-trigger. Verify Touch 01 reads as "from Jamie — Jamie" with `jamie@therunrec.com` as the contact.
 4. Use "Send next message immediately" to fast-forward through Touches 02–04.
 5. Verify the personalized referral link in Touch 03 and Touch 04 renders correctly.
@@ -323,7 +323,7 @@ If going with option (a) or (c), make sure the recurrence stops if the profile d
 - [ ] All 4 initial touches built (Touches 01–04)
 - [ ] Touch 05 recurrence mechanism decided (separate flow, manual campaign, or self-loop) and built
 - [ ] VIP / Power User segment exists and is correctly defined (5+ Successfully Paid in 90 days)
-- [ ] Profile properties `location_manager` and `location_manager_email` populated for Waterloo customers (default values: "Sal" / "sal@therunrec.com")
+- [ ] Profile properties `location_manager` and `location_manager_email` populated for Waterloo customers (default values: "The RunRec Team" / "contact@therunrec.com")
 - [ ] Touch 01 dynamic From label and From email tested with both Waterloo and a fake non-Waterloo profile
 - [ ] Conditional splits on Touches 02, 03, 04 check VIP segment membership
 - [ ] SMS consent check on Touch 04
@@ -356,7 +356,7 @@ If going with option (a) or (c), make sure the recurrence stops if the profile d
 
 ## Common issues for THIS flow
 
-1. **The {{location_manager}} merge tags are the franchise pivot — without them, this flow doesn't clone.** Get them right at Touch 01. Fallbacks to "Sal" / "sal@therunrec.com" are fine for Waterloo HQ but the template is now multi-location-ready.
+1. **The {{location_manager}} merge tags are the franchise pivot — without them, this flow doesn't clone.** Get them right at Touch 01. Fallbacks are "The RunRec Team" / "contact@therunrec.com" for Waterloo HQ; the template is multi-location-ready. **Personal work emails are never used as customer-facing defaults** (operator directive).
 
 2. **Touch 02 fires regardless of whether there's actually a new program.** Without conditional logic to skip empty drops, this email becomes hollow. Add the "if `new_program_name` is set" conditional or skip Touch 02 entirely some quarters.
 
@@ -372,4 +372,4 @@ If going with option (a) or (c), make sure the recurrence stops if the profile d
 
 8. **The flow can over-mail engaged customers.** A VIP customer might also be in Welcome (if recent signup), Booking Confirm (every booking), Post-Session (every booking), AND Win-Back (if they slow down). Coordinate cadence: a VIP booking 6 sessions in 90 days could receive 50+ messages from RunRec in the same period. Watch for unsubscribes.
 
-9. **Sender doctrine inconsistency in the deployed dashboard.** Touch 01 currently shows "From: The RunRec" (not `{{location_manager}}`) and signs "— Sal." This is the canonical example of the franchise-pivot work that wasn't fully completed. The buildsheet's target state is `{{location_manager}}` end-to-end. Pick one before launch and apply consistently. Recommended: apply the merge tags as documented above, with Sal/sal@ as Waterloo defaults.
+9. **Sender doctrine inconsistency in the deployed dashboard.** Touch 01 currently shows "From: The RunRec" (not `{{location_manager}}`) and signs "— Sal." This is the canonical example of the franchise-pivot work that wasn't fully completed. The buildsheet's target state is `{{location_manager}}` end-to-end. Pick one before launch and apply consistently. Recommended: apply the merge tags as documented above, with "The RunRec Team" / contact@therunrec.com as Waterloo defaults (per operator directive — personal work email is never a customer-facing default).

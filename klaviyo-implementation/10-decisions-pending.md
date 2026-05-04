@@ -31,8 +31,8 @@ When you make a decision, mark it ✅ DECIDED and add the choice + date.
 **Why it matters:** 17+ custom properties needed. Some require operational context Sal owns.
 
 **Specifically need confirmation on:**
-- `location_manager` — set default for Waterloo HQ to "Sal" or "Sal Dader" or something else?
-- `location_manager_email` — `sal@therunrec.com` confirmed?
+- `location_manager` — RESOLVED 2026-05-04: default = "The RunRec Team" (operator directive — never personal name)
+- `location_manager_email` — RESOLVED 2026-05-04: default = `contact@therunrec.com` (operator directive — personal work email is never a customer-facing default)
 - `location_phone` — `519-800-9894` confirmed?
 - `membership_tier` values — what are the actual tier names? "None / Member / VIP" or different?
 - `corporate_status` values — "Lead / Active / Lapsed" or different?
