@@ -140,6 +140,11 @@
   }
   .email-image-block.text-only::before { display: none; }
   .email-image-block .img-desc { font-family: var(--sans); font-size: 13px; line-height: 1.5; color: rgba(255,255,255,0.85); text-transform: none; letter-spacing: 0; max-width: 480px; margin: 0 auto; font-style: italic; }
+  .email-image-block .design-tag { font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); padding: 5px 0 5px 10px; border-left: 2px solid var(--accent); margin: 0 auto 10px auto; max-width: 480px; display: flex; align-items: center; gap: 6px; font-weight: 600; }
+  .design-tag-sep { opacity: 0.45; }
+  .design-tag-status.pending { color: var(--accent); }
+  .design-tag-status.uploaded { color: #22c55e; }
+  .design-tag-icon { font-size: 13px; line-height: 1; }
   .email-body { padding: 32px; font-size: 15px; line-height: 1.7; color: var(--ink); }
   .email-body p { margin-bottom: 14px; }
   .email-body p.signature { margin-top: 24px; color: var(--ink); font-style: italic; }
@@ -602,6 +607,7 @@
       <div class="email-subject">What you just signed up for.</div>
       <div class="email-preview-text">24/7 private courts. No staff. No crowds. Just play.</div>
       <div class="email-image-block">
+        <div class="design-tag"><span class="design-tag-icon">🎨</span><span class="design-tag-owner">EYAD</span><span class="design-tag-sep">·</span><span class="design-tag-id">01-T1-hero</span><span class="design-tag-sep">·</span><span class="design-tag-status pending">⬜ PENDING</span></div>
         <div class="img-desc">Wide-angle hero shot of empty Court A at 11pm — overhead lights on, basketball at center court, no people. Slightly moody, warm tones. Logo bottom right.</div>
       </div>
       <div class="email-body">
