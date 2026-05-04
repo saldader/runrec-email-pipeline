@@ -214,6 +214,18 @@
     flex-shrink: 0;
   }
   .panel-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+  .panel-card.design-asset { border-left: 3px solid var(--accent); background: var(--accent-soft); position: relative; }
+  .panel-card.design-asset .label { color: var(--accent); }
+  .panel-card.design-asset h4 { font-family: var(--mono); font-size: 14px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+  .panel-card.design-asset .da-meta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.5px; color: var(--ink-soft); margin: 4px 0 12px 0; line-height: 1.9; }
+  .panel-card.design-asset .da-meta strong { color: var(--ink); text-transform: uppercase; letter-spacing: 1px; font-size: 10px; }
+  .panel-card.design-asset .da-meta code { font-family: var(--mono); font-size: 11px; color: var(--ink); background: transparent; padding: 0; text-transform: none; }
+  .panel-card.design-asset .da-meta .status-pending { color: var(--accent); font-weight: 700; }
+  .panel-card.design-asset .da-meta .status-uploaded { color: #22c55e; font-weight: 700; }
+  .panel-card.design-asset .da-note { font-size: 12px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 14px; }
+  .panel-card.design-asset .da-note code { font-family: var(--mono); font-size: 11px; background: var(--cream-dark); padding: 1px 5px; border-radius: 3px; color: var(--ink); }
+  .panel-card.design-asset .da-cta { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); padding: 8px 12px; border: 1px dashed var(--accent); border-radius: 4px; text-decoration: none; }
+  .panel-card.design-asset .da-cta:hover { background: var(--accent); color: var(--cream); }
   .panel-stat-grid .stat { background: var(--cream-dark); padding: 12px; border-radius: 4px; }
   .panel-stat-grid .stat .l { font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; }
   .panel-stat-grid .stat .v { font-family: var(--serif); font-size: 20px; font-weight: 700; line-height: 1; margin-top: 4px; }
@@ -579,6 +591,13 @@
         <div class="email-footer">RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a> · <a href="#">manage preferences</a></div>
       </div>
       <div class="side-panel">
+        <div class="panel-card design-asset">
+          <div class="label">▸ Design asset · pending</div>
+          <h4>🎨 07-T1-regular-stamp</h4>
+          <div class="da-meta"><strong>Designer:</strong> <code>a.eyad@therunrec.com</code><br><strong>Builder:</strong> Rammah (uses <code>contact@therunrec.com</code>)<br><strong>Status:</strong> <span class="status-pending">⬜ Not yet uploaded</span></div>
+          <p class="da-note"><strong>Rammah:</strong> do not build this email until Eyad has uploaded the design asset.<br><strong>Eyad:</strong> upload as <code>07-T1-regular-stamp.png</code> (1200×675, 16:9). Premium dark-mode treatment with hand-stamped &ldquo;REGULAR&rdquo; graphic in accent orange.</p>
+          <a class="da-cta" href="https://drive.google.com/drive/folders/14KWfEgHijIszaIN64hb01MqBkskzE_5f" target="_blank" rel="noopener">📂 Open 07-VIP-Referral folder · Upload here</a>
+        </div>
         <div class="panel-card"><div class="label">▸ Image direction</div><h4>Premium dark · status mark</h4><p>VIP template. Dark accent. Should feel different from every other RunRec email — premium, exclusive.</p></div>
         <div class="panel-card"><div class="label">▸ Specs</div><ul><li>Template: <strong>VIP / Status</strong></li><li>Word count: <strong>106 words</strong></li><li>Zero ask · pure recognition</li></ul></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>NO ASK</h4><p>Status, not stuff. Brunson Attractive Character. Hormozi high-status / low-ask.</p></div>
@@ -607,6 +626,13 @@
         <div class="email-footer">RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a> · <a href="#">manage preferences</a></div>
       </div>
       <div class="side-panel">
+        <div class="panel-card design-asset">
+          <div class="label">▸ Design asset · pending</div>
+          <h4>🎨 07-T2-program-hero</h4>
+          <div class="da-meta"><strong>Designer:</strong> <code>a.eyad@therunrec.com</code><br><strong>Builder:</strong> Rammah (uses <code>contact@therunrec.com</code>)<br><strong>Status:</strong> <span class="status-pending">⬜ Not yet uploaded</span></div>
+          <p class="da-note"><strong>Rammah:</strong> do not build this email until Eyad has uploaded the design asset.<br><strong>Eyad:</strong> upload as <code>07-T2-program-hero.jpg</code> (1200×675, 16:9). Hero image of the new program/event in premium dark template, accent details only.</p>
+          <a class="da-cta" href="https://drive.google.com/drive/folders/14KWfEgHijIszaIN64hb01MqBkskzE_5f" target="_blank" rel="noopener">📂 Open 07-VIP-Referral folder · Upload here</a>
+        </div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>REINFORCE</h4><p>Reinforces VIP frame before any ask. Brunson: identity comes before action.</p></div>
         <div class="panel-card"><div class="label">▸ When to fire</div><p>Only fires when there's a real new program / event to drop. Otherwise skipped — don't manufacture exclusivity.</p></div>
       </div>
@@ -670,6 +696,13 @@
         <div class="email-footer">RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a> · <a href="#">manage preferences</a></div>
       </div>
       <div class="side-panel">
+        <div class="panel-card design-asset">
+          <div class="label">▸ Design asset · pending</div>
+          <h4>🎨 07-T5-quarterly-drop</h4>
+          <div class="da-meta"><strong>Designer:</strong> <code>a.eyad@therunrec.com</code><br><strong>Builder:</strong> Rammah (uses <code>contact@therunrec.com</code>)<br><strong>Status:</strong> <span class="status-pending">⬜ Not yet uploaded</span></div>
+          <p class="da-note"><strong>Rammah:</strong> do not build this email until Eyad has uploaded the design asset.<br><strong>Eyad:</strong> upload as <code>07-T5-quarterly-drop.jpg</code> (1200×675, 16:9). Premium dark-mode hero of the seasonal event, members-only night, merch drop, or facility upgrade.</p>
+          <a class="da-cta" href="https://drive.google.com/drive/folders/14KWfEgHijIszaIN64hb01MqBkskzE_5f" target="_blank" rel="noopener">📂 Open 07-VIP-Referral folder · Upload here</a>
+        </div>
         <div class="panel-card"><div class="label">▸ Recurrence</div><p>Fires every quarter as long as the profile stays in the VIP segment. Auto re-evaluates eligibility before send.</p></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>MAINTAIN</h4><p>Keeps VIPs in the tent. Status reminder + first-mover advantage.</p></div>
       </div>

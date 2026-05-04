@@ -214,6 +214,18 @@
     flex-shrink: 0;
   }
   .panel-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+  .panel-card.design-asset { border-left: 3px solid var(--accent); background: var(--accent-soft); position: relative; }
+  .panel-card.design-asset .label { color: var(--accent); }
+  .panel-card.design-asset h4 { font-family: var(--mono); font-size: 14px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+  .panel-card.design-asset .da-meta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.5px; color: var(--ink-soft); margin: 4px 0 12px 0; line-height: 1.9; }
+  .panel-card.design-asset .da-meta strong { color: var(--ink); text-transform: uppercase; letter-spacing: 1px; font-size: 10px; }
+  .panel-card.design-asset .da-meta code { font-family: var(--mono); font-size: 11px; color: var(--ink); background: transparent; padding: 0; text-transform: none; }
+  .panel-card.design-asset .da-meta .status-pending { color: var(--accent); font-weight: 700; }
+  .panel-card.design-asset .da-meta .status-uploaded { color: #22c55e; font-weight: 700; }
+  .panel-card.design-asset .da-note { font-size: 12px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 14px; }
+  .panel-card.design-asset .da-note code { font-family: var(--mono); font-size: 11px; background: var(--cream-dark); padding: 1px 5px; border-radius: 3px; color: var(--ink); }
+  .panel-card.design-asset .da-cta { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); padding: 8px 12px; border: 1px dashed var(--accent); border-radius: 4px; text-decoration: none; }
+  .panel-card.design-asset .da-cta:hover { background: var(--accent); color: var(--cream); }
   .panel-stat-grid .stat { background: var(--cream-dark); padding: 12px; border-radius: 4px; }
   .panel-stat-grid .stat .l { font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; }
   .panel-stat-grid .stat .v { font-family: var(--serif); font-size: 20px; font-weight: 700; line-height: 1; margin-top: 4px; }
@@ -578,6 +590,13 @@
         <div class="email-footer">RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a> · <a href="#">manage preferences</a></div>
       </div>
       <div class="side-panel">
+        <div class="panel-card design-asset">
+          <div class="label">▸ Design asset · pending</div>
+          <h4>🎨 08-T1-walkthrough-thumb</h4>
+          <div class="da-meta"><strong>Designer:</strong> <code>a.eyad@therunrec.com</code><br><strong>Builder:</strong> Rammah (uses <code>contact@therunrec.com</code>)<br><strong>Status:</strong> <span class="status-pending">⬜ Not yet uploaded</span></div>
+          <p class="da-note"><strong>Rammah:</strong> do not build this email until Eyad has uploaded the design asset.<br><strong>Eyad:</strong> upload as <code>08-T1-walkthrough-thumb.jpg</code> (1200×675, 16:9). Video thumbnail with play button overlay on a still from the walkthrough video, or photo carousel of facility interior.</p>
+          <a class="da-cta" href="https://drive.google.com/drive/folders/1uMy4WUShd7kngtYS_v3Qi_k7aCETVj5i" target="_blank" rel="noopener">📂 Open 08-Lead-Nurture folder · Upload here</a>
+        </div>
         <div class="panel-card"><div class="label">▸ Image direction</div><h4>Video thumbnail or photo carousel</h4><p>Real walkthrough video preferred (3 min). Filmed POV-style as if walking in. Captures the unstaffed entry, court layout, amenities.</p></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>REDUCE FRICTION</h4><p>Kills the #1 unstaffed-model objection: "I don't know what I'm walking into."</p></div>
       </div>
@@ -603,6 +622,13 @@
         <div class="email-footer">RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a> · <a href="#">manage preferences</a></div>
       </div>
       <div class="side-panel">
+        <div class="panel-card design-asset">
+          <div class="label">▸ Design asset · pending</div>
+          <h4>🎨 08-T2-usecase-grid</h4>
+          <div class="da-meta"><strong>Designer:</strong> <code>a.eyad@therunrec.com</code><br><strong>Builder:</strong> Rammah (uses <code>contact@therunrec.com</code>)<br><strong>Status:</strong> <span class="status-pending">⬜ Not yet uploaded</span></div>
+          <p class="da-note"><strong>Rammah:</strong> do not build this email until Eyad has uploaded the design asset.<br><strong>Eyad:</strong> upload as <code>08-T2-usecase-grid.png</code> (600×600). 2x2 hand-drawn icon grid: solo trainer, friend group, party host, league runner. Match the Welcome flow Day 7 style.</p>
+          <a class="da-cta" href="https://drive.google.com/drive/folders/1uMy4WUShd7kngtYS_v3Qi_k7aCETVj5i" target="_blank" rel="noopener">📂 Open 08-Lead-Nurture folder · Upload here</a>
+        </div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>STORY · self-segment</h4><p>Brunson identity-based segmentation. Each click tags <code>lead_use_case</code> for downstream personalization.</p></div>
       </div>
     </div>
@@ -639,6 +665,13 @@
         <div class="email-footer">RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a> · <a href="#">manage preferences</a></div>
       </div>
       <div class="side-panel">
+        <div class="panel-card design-asset">
+          <div class="label">▸ Design asset · pending</div>
+          <h4>🎨 08-T4-slot-cards</h4>
+          <div class="da-meta"><strong>Designer:</strong> <code>a.eyad@therunrec.com</code><br><strong>Builder:</strong> Rammah (uses <code>contact@therunrec.com</code>)<br><strong>Status:</strong> <span class="status-pending">⬜ Not yet uploaded</span></div>
+          <p class="da-note"><strong>Rammah:</strong> do not build this email until Eyad has uploaded the design asset.<br><strong>Eyad:</strong> upload as <code>08-T4-slot-cards.png</code> (600×600). Calendar or time-slot card layout showing the 4 recommended off-peak slots.</p>
+          <a class="da-cta" href="https://drive.google.com/drive/folders/1uMy4WUShd7kngtYS_v3Qi_k7aCETVj5i" target="_blank" rel="noopener">📂 Open 08-Lead-Nurture folder · Upload here</a>
+        </div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>DECISION AID</h4><p>Reduces "infinite options" paralysis. Concrete recommended slots beat generic search.</p></div>
       </div>
     </div>
@@ -665,6 +698,13 @@
         <div class="email-footer">RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a> · <a href="#">manage preferences</a></div>
       </div>
       <div class="side-panel">
+        <div class="panel-card design-asset">
+          <div class="label">▸ Design asset · pending</div>
+          <h4>🎨 08-T5-customer-story</h4>
+          <div class="da-meta"><strong>Designer:</strong> <code>a.eyad@therunrec.com</code><br><strong>Builder:</strong> Rammah (uses <code>contact@therunrec.com</code>)<br><strong>Status:</strong> <span class="status-pending">⬜ Not yet uploaded</span></div>
+          <p class="da-note"><strong>Rammah:</strong> do not build this email until Eyad has uploaded the design asset.<br><strong>Eyad:</strong> upload as <code>08-T5-customer-story.jpg</code> (1200×675, 16:9). Real consented customer photo on-court, candid. Or courtside scene that matches the story.</p>
+          <a class="da-cta" href="https://drive.google.com/drive/folders/1uMy4WUShd7kngtYS_v3Qi_k7aCETVj5i" target="_blank" rel="noopener">📂 Open 08-Lead-Nurture folder · Upload here</a>
+        </div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>BELIEF</h4><p>Brunson "epiphany bridge" — they see someone like themselves crossing the line. Story matches their use case (auto-personalized via Day 3 click).</p></div>
       </div>
     </div>

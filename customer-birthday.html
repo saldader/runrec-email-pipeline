@@ -214,6 +214,18 @@
     flex-shrink: 0;
   }
   .panel-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+  .panel-card.design-asset { border-left: 3px solid var(--accent); background: var(--accent-soft); position: relative; }
+  .panel-card.design-asset .label { color: var(--accent); }
+  .panel-card.design-asset h4 { font-family: var(--mono); font-size: 14px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+  .panel-card.design-asset .da-meta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.5px; color: var(--ink-soft); margin: 4px 0 12px 0; line-height: 1.9; }
+  .panel-card.design-asset .da-meta strong { color: var(--ink); text-transform: uppercase; letter-spacing: 1px; font-size: 10px; }
+  .panel-card.design-asset .da-meta code { font-family: var(--mono); font-size: 11px; color: var(--ink); background: transparent; padding: 0; text-transform: none; }
+  .panel-card.design-asset .da-meta .status-pending { color: var(--accent); font-weight: 700; }
+  .panel-card.design-asset .da-meta .status-uploaded { color: #22c55e; font-weight: 700; }
+  .panel-card.design-asset .da-note { font-size: 12px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 14px; }
+  .panel-card.design-asset .da-note code { font-family: var(--mono); font-size: 11px; background: var(--cream-dark); padding: 1px 5px; border-radius: 3px; color: var(--ink); }
+  .panel-card.design-asset .da-cta { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); padding: 8px 12px; border: 1px dashed var(--accent); border-radius: 4px; text-decoration: none; }
+  .panel-card.design-asset .da-cta:hover { background: var(--accent); color: var(--cream); }
   .panel-stat-grid .stat { background: var(--cream-dark); padding: 12px; border-radius: 4px; }
   .panel-stat-grid .stat .l { font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; }
   .panel-stat-grid .stat .v { font-family: var(--serif); font-size: 20px; font-weight: 700; line-height: 1; margin-top: 4px; }
@@ -581,6 +593,13 @@
         <div class="email-footer">RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a> · <a href="#">manage preferences</a></div>
       </div>
       <div class="side-panel">
+        <div class="panel-card design-asset">
+          <div class="label">▸ Design asset · pending</div>
+          <h4>🎨 04-T1-gift-box</h4>
+          <div class="da-meta"><strong>Designer:</strong> <code>a.eyad@therunrec.com</code><br><strong>Builder:</strong> Rammah (uses <code>contact@therunrec.com</code>)<br><strong>Status:</strong> <span class="status-pending">⬜ Not yet uploaded</span></div>
+          <p class="da-note"><strong>Rammah:</strong> do not build this email until Eyad has uploaded the design asset.<br><strong>Eyad:</strong> upload as <code>04-T1-gift-box.jpg</code> (1200×675, 16:9). Wrapped gift box on hardwood, single overhead light. Moody anticipation, no party-store imagery.</p>
+          <a class="da-cta" href="https://drive.google.com/drive/folders/1JUWjmH-P4_zBHsQ4q9TQ5r3AvnXzW6FJ" target="_blank" rel="noopener">📂 Open 04-Customer-Birthday folder · Upload here</a>
+        </div>
         <div class="panel-card"><div class="label">▸ Image direction</div><h4>Gift box · single light · moody</h4><p>Avoid balloon-and-streamers cliché. The brand is "premium private courts," not "kids party shop." Single wrapped box on hardwood, overhead light.</p></div>
         <div class="panel-card"><div class="label">▸ Specs</div><ul><li>Word count: <strong>43 words</strong></li><li>Deliverability primer (avoid spam)</li><li>No reveal — anticipation only</li></ul></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>WARMUP</h4><p>Builds anticipation. PS plants the differentiator (real gift, not discount).</p></div>
@@ -628,6 +647,13 @@
         <div class="email-footer">RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a> · <a href="#">manage preferences</a></div>
       </div>
       <div class="side-panel">
+        <div class="panel-card design-asset">
+          <div class="label">▸ Design asset · pending</div>
+          <h4>🎨 04-T3-slot-cards</h4>
+          <div class="da-meta"><strong>Designer:</strong> <code>a.eyad@therunrec.com</code><br><strong>Builder:</strong> Rammah (uses <code>contact@therunrec.com</code>)<br><strong>Status:</strong> <span class="status-pending">⬜ Not yet uploaded</span></div>
+          <p class="da-note"><strong>Rammah:</strong> do not build this email until Eyad has uploaded the design asset.<br><strong>Eyad:</strong> upload as <code>04-T3-slot-cards.png</code> (600×600). Calendar or time-slot card layout with off-peak windows highlighted in accent orange.</p>
+          <a class="da-cta" href="https://drive.google.com/drive/folders/1JUWjmH-P4_zBHsQ4q9TQ5r3AvnXzW6FJ" target="_blank" rel="noopener">📂 Open 04-Customer-Birthday folder · Upload here</a>
+        </div>
         <div class="panel-card"><div class="label">▸ Image direction</div><h4>Calendar / time-slot cards</h4><p>Off-peak hours visualized. Simple layout, no decorative birthday imagery.</p></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>PROXIMITY</h4><p>Reduces decision friction. Specific recommended slots beat generic "book now."</p></div>
       </div>
@@ -657,6 +683,13 @@
         <div class="email-footer">RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a> · <a href="#">manage preferences</a></div>
       </div>
       <div class="side-panel">
+        <div class="panel-card design-asset">
+          <div class="label">▸ Design asset · pending</div>
+          <h4>🎨 04-T4-hourglass</h4>
+          <div class="da-meta"><strong>Designer:</strong> <code>a.eyad@therunrec.com</code><br><strong>Builder:</strong> Rammah (uses <code>contact@therunrec.com</code>)<br><strong>Status:</strong> <span class="status-pending">⬜ Not yet uploaded</span></div>
+          <p class="da-note"><strong>Rammah:</strong> do not build this email until Eyad has uploaded the design asset.<br><strong>Eyad:</strong> upload as <code>04-T4-hourglass.png</code> (600×600). Minimalist hourglass illustration or simple countdown graphic.</p>
+          <a class="da-cta" href="https://drive.google.com/drive/folders/1JUWjmH-P4_zBHsQ4q9TQ5r3AvnXzW6FJ" target="_blank" rel="noopener">📂 Open 04-Customer-Birthday folder · Upload here</a>
+        </div>
         <div class="panel-card"><div class="label">▸ Specs</div><ul><li>Word count: <strong>62 words</strong></li><li>Specific expiry date (not "soon")</li><li>PS gift-transfer is the unlock mechanism for hard cases</li></ul></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>CONCRETE DEADLINE</h4><p>"Specific date you can mark on a calendar" outperforms vague urgency 4:1.</p></div>
       </div>

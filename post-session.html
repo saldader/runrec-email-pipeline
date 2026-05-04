@@ -214,6 +214,18 @@
     flex-shrink: 0;
   }
   .panel-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+  .panel-card.design-asset { border-left: 3px solid var(--accent); background: var(--accent-soft); position: relative; }
+  .panel-card.design-asset .label { color: var(--accent); }
+  .panel-card.design-asset h4 { font-family: var(--mono); font-size: 14px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+  .panel-card.design-asset .da-meta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.5px; color: var(--ink-soft); margin: 4px 0 12px 0; line-height: 1.9; }
+  .panel-card.design-asset .da-meta strong { color: var(--ink); text-transform: uppercase; letter-spacing: 1px; font-size: 10px; }
+  .panel-card.design-asset .da-meta code { font-family: var(--mono); font-size: 11px; color: var(--ink); background: transparent; padding: 0; text-transform: none; }
+  .panel-card.design-asset .da-meta .status-pending { color: var(--accent); font-weight: 700; }
+  .panel-card.design-asset .da-meta .status-uploaded { color: #22c55e; font-weight: 700; }
+  .panel-card.design-asset .da-note { font-size: 12px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 14px; }
+  .panel-card.design-asset .da-note code { font-family: var(--mono); font-size: 11px; background: var(--cream-dark); padding: 1px 5px; border-radius: 3px; color: var(--ink); }
+  .panel-card.design-asset .da-cta { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); padding: 8px 12px; border: 1px dashed var(--accent); border-radius: 4px; text-decoration: none; }
+  .panel-card.design-asset .da-cta:hover { background: var(--accent); color: var(--cream); }
   .panel-stat-grid .stat { background: var(--cream-dark); padding: 12px; border-radius: 4px; }
   .panel-stat-grid .stat .l { font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; }
   .panel-stat-grid .stat .v { font-family: var(--serif); font-size: 20px; font-weight: 700; line-height: 1; margin-top: 4px; }
@@ -613,6 +625,13 @@
         <div class="email-footer">RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · <a href="#">unsubscribe</a> · <a href="#">manage preferences</a></div>
       </div>
       <div class="side-panel">
+        <div class="panel-card design-asset">
+          <div class="label">▸ Design asset · pending</div>
+          <h4>🎨 03-T3-calendar-grid</h4>
+          <div class="da-meta"><strong>Designer:</strong> <code>a.eyad@therunrec.com</code><br><strong>Builder:</strong> Rammah (uses <code>contact@therunrec.com</code>)<br><strong>Status:</strong> <span class="status-pending">⬜ Not yet uploaded</span></div>
+          <p class="da-note"><strong>Rammah:</strong> do not build this email until Eyad has uploaded the design asset.<br><strong>Eyad:</strong> upload as <code>03-T3-calendar-grid.png</code> (600×600). Visual 7-day calendar grid with 4 open slots highlighted in accent orange — clickable card layout.</p>
+          <a class="da-cta" href="https://drive.google.com/drive/folders/1L6iqEe55ZBxvt8MagerByOId8YkUSTmX" target="_blank" rel="noopener">📂 Open 03-Post-Session folder · Upload here</a>
+        </div>
         <div class="panel-card"><div class="label">▸ Image direction</div><h4>Calendar visual or slot cards</h4><p>Real calendar UI > generic stock photo. Each slot clickable, each link routes to that exact booking.</p></div>
         <div class="panel-card"><div class="label">▸ Specs</div><ul><li>Template: Flow / Personal</li><li>Word count: <strong>78 words</strong></li><li>Skipped if rebooked already</li></ul></div>
         <div class="panel-card"><div class="label">▸ Mechanism</div><h4>SPECIFIC CTA</h4><p>Specific time slots > generic "come back soon." Reduces decision fatigue.</p></div>
