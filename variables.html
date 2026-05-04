@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Variables Spec · The RunRec</title>
+<title>Variables Spec · RunRec</title>
 <style>
 :root { --cream: #f7f3ec; --cream-dark: #ede7db; --paper: #fff; --ink: #1a1a1a; --ink-soft: #2a2a2a; --accent: #e85a3e; --accent-soft: rgba(232,90,62,0.12); --muted: #6b6b6b; --line: rgba(26,26,26,0.08); --serif: 'Playfair Display','Iowan Old Style',Georgia,serif; --sans: -apple-system,BlinkMacSystemFont,'Inter','Helvetica Neue',sans-serif; --mono: 'JetBrains Mono','Menlo','Monaco',monospace; }
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -51,7 +51,7 @@ footer.site .container { display:flex; justify-content:space-between; }
 
 <header class="site">
   <div class="container">
-    <a href="index.html" style="text-decoration:none;color:inherit;"><div class="logo"><div class="dot"></div><div class="text">The RunRec<small>Email Marketing Pipeline</small></div></a>
+    <a href="index.html" style="text-decoration:none;color:inherit;"><div class="logo"><div class="dot"></div><div class="text">RunRec<small>Email Marketing Pipeline</small></div></a>
     </div>
     <div style="font-family:var(--mono);font-size:10px;letter-spacing:1.5px;color:var(--accent);text-transform:uppercase;">▸ v1.1 · Post-QA</div>
   </div>
@@ -148,7 +148,7 @@ footer.site .container { display:flex; justify-content:space-between; }
     <table class="vars">
       <thead><tr><th>Variable</th><th>Waterloo default</th><th>Type</th><th>Notes</th></tr></thead>
       <tbody>
-        <tr><td><code>{{ LOCATION_NAME }}</code></td><td class="waterloo">The RunRec</td><td>String</td><td>Brand mark, used in body + footer</td></tr>
+        <tr><td><code>{{ LOCATION_NAME }}</code></td><td class="waterloo">RunRec</td><td>String</td><td>Brand mark, used in body + footer</td></tr>
         <tr><td><code>{{ LOCATION_ADDRESS }}</code></td><td class="waterloo">283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8</td><td>Postal address</td><td>CASL/CAN-SPAM mandatory in every email footer</td></tr>
         <tr><td><code>{{ LOCATION_PHONE }}</code></td><td class="waterloo">+1 (519) 800-9894</td><td>E.164</td><td>SMS sender ID + signature lines</td></tr>
         <tr><td><code>{{ LOCATION_HOURS }}</code></td><td class="waterloo">24/7/365</td><td>String</td><td>Most locations match</td></tr>
@@ -164,7 +164,7 @@ footer.site .container { display:flex; justify-content:space-between; }
         <tr><td><code>{{ CORPORATE_HOUR_RATE }}</code></td><td class="waterloo">$216 / additional hour</td><td>Currency</td><td>F09</td></tr>
         <tr><td><code>{{ COORDINATOR_NAME }}</code></td><td class="waterloo">(varies per booking)</td><td>String</td><td>F02 if party booking. NOT a separate $99 SKU — built into birthday packages.</td></tr>
         <tr><td><code>{{ SOCIAL_HANDLES }}</code></td><td class="waterloo">@therunrec (IG/FB/TikTok)</td><td>Strings</td><td>Footer links</td></tr>
-        <tr><td><code>{{ SENDER_NAME }}</code></td><td class="waterloo">The RunRec</td><td>String</td><td>From-name in all emails except Flow 09 (B2B uses {{location_manager}} directly)</td></tr>
+        <tr><td><code>{{ SENDER_NAME }}</code></td><td class="waterloo">RunRec</td><td>String</td><td>From-name in all emails except Flow 09 (B2B uses {{location_manager}} directly)</td></tr>
         <tr><td><code>{{ SENDER_EMAIL }}</code></td><td class="waterloo">contact@therunrec.com</td><td>Email</td><td>Per franchise: contact@{location}.therunrec.com or per-domain</td></tr>
       </tbody>
     </table>
@@ -235,7 +235,7 @@ footer.site .container { display:flex; justify-content:space-between; }
   </div>
 </section>
 
-<footer class="site"><div class="container"><div>▸ The RunRec · Email Marketing Pipeline · v1.1 · Post-QA</div><div>Variables Spec</div></div></footer>
+<footer class="site"><div class="container"><div>▸ RunRec · Email Marketing Pipeline · v1.1 · Post-QA</div><div>Variables Spec</div></div></footer>
 
 </body>
 </html>

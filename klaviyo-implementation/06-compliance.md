@@ -67,13 +67,13 @@ For RunRec specifically:
 
 Every commercial email and SMS must clearly identify:
 
-- The sender's business name (e.g., "The RunRec")
+- The sender's business name (e.g., "RunRec")
 - A current physical mailing address (PO box is acceptable; the Northfield Dr. E address satisfies this)
 - Contact information for the sender (email or phone)
 
 **How Klaviyo handles this:** Klaviyo's email footer template auto-populates the business name and physical address from your account settings. Verify in **Settings → Account → Organization Information** that:
 
-- Organization name is "The RunRec" (or legal entity name if different)
+- Organization name is "RunRec" (or legal entity name if different)
 - Mailing address is current (the audit confirms 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8)
 - Phone number is set
 
@@ -125,7 +125,7 @@ CAN-SPAM is generally **less strict than CASL** on consent (it allows opt-out in
 
 The same Klaviyo configuration that satisfies CASL also satisfies most of CAN-SPAM. The exception is the "identification as advertisement" rule for purely commercial messages. RunRec's brand voice already softens promotional emails into editorial-style content (e.g., "What you just signed up for," not "BUY NOW 50% OFF"), which mostly avoids the strict-promotional category.
 
-If you ever send a hard-sell promotional email to US recipients, add wording like "This is a promotional email from The RunRec" near the top. Subtle and one-time, but covers the requirement.
+If you ever send a hard-sell promotional email to US recipients, add wording like "This is a promotional email from RunRec" near the top. Subtle and one-time, but covers the requirement.
 
 ---
 

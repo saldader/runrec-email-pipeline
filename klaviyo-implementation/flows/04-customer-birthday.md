@@ -111,7 +111,7 @@ END
 
 - **Channel:** Email
 - **Send delay:** Immediate on trigger (DOB -7, 10am local)
-- **From name:** `The RunRec`
+- **From name:** `RunRec`
 - **From email:** `contact@therunrec.com`
 - **Reply-to:** same as From
 - **Subject line:** `Birthday week is coming.`
@@ -126,7 +126,7 @@ END
 <p>Your birthday's coming up next week.</p>
 <p>We've got something for you. We'll text you the details on the day.</p>
 <p>Quick heads up — just so it doesn't go to spam.</p>
-<p style="font-style:italic;">— The RunRec team</p>
+<p style="font-style:italic;">— RunRec team</p>
 <p style="margin-top:24px;padding-top:20px;border-top:1px dashed #999;font-size:14px;"><strong style="color:#e85a3e;">PS</strong> — Don't worry, it's not a 10% off coupon. People talk about gifts, not discounts.</p>
 ```
 
@@ -173,7 +173,7 @@ Happy birthday {{ first_name|default:'there' }} 🎉 A free hour at RunRec is on
 
 - **Channel:** Email
 - **Send delay:** Wait 3 days from Touch 02 (DOB +3), send at 10am
-- **From name:** `The RunRec`
+- **From name:** `RunRec`
 - **From email:** `contact@therunrec.com`
 - **Reply-to:** same as From
 - **Subject line:** `When are you redeeming your free hour?`
@@ -213,7 +213,7 @@ The merge tags `{{ profile.bday_expiry_date }}` and `{{ profile.bday_days_remain
 
 - **Channel:** Email
 - **Send delay:** Wait 11 more days (DOB +14), send at 10am
-- **From name:** `The RunRec`
+- **From name:** `RunRec`
 - **From email:** `contact@therunrec.com`
 - **Reply-to:** same as From
 - **Subject line:** `Half your birthday hour is gone.`

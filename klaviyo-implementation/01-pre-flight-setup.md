@@ -60,7 +60,7 @@ Three records prove it:
 - **DKIM** — a cryptographic signature on every email proving it came from Klaviyo legitimately
 - **DMARC** — a policy telling email providers what to do if SPF or DKIM fails (allow, quarantine, reject)
 
-A fourth record (BIMI) shows the RunRec logo next to the sender name in supported inboxes — nice-to-have, not required.
+A fourth record (BIMI) shows RunRec logo next to the sender name in supported inboxes — nice-to-have, not required.
 
 ### B.1 Set up the branded sending domain
 
@@ -155,7 +155,7 @@ A "sender profile" is the from-name and from-email shown to recipients. RunRec u
 2. Click **Add sender profile**
 3. Configure:
    - **From email:** `contact@therunrec.com`
-   - **From label (name shown to recipient):** `The RunRec`
+   - **From label (name shown to recipient):** `RunRec`
    - **Reply-to email:** `contact@therunrec.com` (same as from)
 4. Click **Save**
 5. Klaviyo will send a confirmation email to `contact@therunrec.com`. Someone with access to that inbox needs to click the verification link.
@@ -178,7 +178,7 @@ To create it:
 
 1. **Account → Settings → Email → Sender profiles → Add sender profile**
 2. **From email:** `eyad@therunrec.com` (or whatever the Waterloo manager email is)
-3. **From label:** Use the manager's actual name, e.g., `Eyad at The RunRec`
+3. **From label:** Use the manager's actual name, e.g., `Eyad at RunRec`
 4. **Reply-to:** Same as from
 5. **Save**, then verify the address from that inbox.
 
@@ -221,7 +221,7 @@ These are listed in priority order. Properties marked **HIGH** are required for 
 | Property | Type | Source / how it gets populated |
 |----------|------|---------------------------------|
 | `location` | Text | Manual (admin assigns by which RunRec the customer books at). Future: auto-set by Skedda webhook. Values: `Waterloo`, `Burlington`, etc. |
-| `location_name` | Text | Same as `location` — used in body copy where the brand name needs to render. Today: just "The RunRec" everywhere. |
+| `location_name` | Text | Same as `location` — used in body copy where the brand name needs to render. Today: just "RunRec" everywhere. |
 | `location_manager` | Text | Manual. The local manager's first name. Example: `Eyad`. |
 | `location_manager_email` | Text | Manual. The local manager's email. Example: `eyad@therunrec.com`. |
 | `location_phone` | Text | Manual. The local facility phone. Example: `+15191234567`. |
@@ -497,7 +497,7 @@ For all templates:
 - 600px max width, single column
 - 60/40 text-to-image ratio minimum
 - All assets hosted on therunrec.com or Klaviyo CDN
-- Footer must include: business name (`The RunRec`), physical address (`283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8`), unsubscribe link, "manage preferences" link
+- Footer must include: business name (`RunRec`), physical address (`283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8`), unsubscribe link, "manage preferences" link
 - Plain text version always included (Klaviyo auto-generates; verify)
 
 ### H.2 How to create a template from scratch

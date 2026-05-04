@@ -124,7 +124,7 @@ END
 
 - **Channel:** Email
 - **Send delay:** Immediate on trigger (Day 60, 10am local)
-- **From name:** `The RunRec`
+- **From name:** `RunRec`
 - **From email:** `contact@therunrec.com`
 - **Reply-to:** same as From
 - **Subject line:** `Everything okay over there?`
@@ -155,7 +155,7 @@ END
 
 - **Channel:** Email
 - **Send delay:** Wait 7 days, send at 10am
-- **From name:** `The RunRec`
+- **From name:** `RunRec`
 - **From email:** `contact@therunrec.com`
 - **Reply-to:** same as From
 - **Subject line:** `Bring a friend — first session is on us.`
@@ -223,7 +223,7 @@ Hey {{ first_name|default:'there' }}, it's the team at RunRec. We added pickleba
 
 - **Channel:** Email
 - **Send delay:** Wait 7 days, send at 10am
-- **From name:** `The RunRec`
+- **From name:** `RunRec`
 - **From email:** `contact@therunrec.com`
 - **Reply-to:** same as From
 - **Subject line:** `What's changed at RunRec since you left.`
@@ -264,7 +264,7 @@ Hey {{ first_name|default:'there' }}, it's the team at RunRec. We added pickleba
 
 - **Channel:** Email
 - **Send delay:** Wait 6 days, send at 10am
-- **From name:** `The RunRec`
+- **From name:** `RunRec`
 - **From email:** `contact@therunrec.com`
 - **Reply-to:** same as From
 - **Subject line:** `About that thing I mentioned.`

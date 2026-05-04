@@ -31,7 +31,7 @@ When you make a decision, mark it ✅ DECIDED and add the choice + date.
 **Why it matters:** 17+ custom properties needed. Some require operational context Sal owns.
 
 **Specifically need confirmation on:**
-- `location_manager` — RESOLVED 2026-05-04: default = "The RunRec Team" (operator directive — never personal name)
+- `location_manager` — RESOLVED 2026-05-04: default = "RunRec Team" (operator directive — never personal name)
 - `location_manager_email` — RESOLVED 2026-05-04: default = `contact@therunrec.com` (operator directive — personal work email is never a customer-facing default)
 - `location_phone` — `519-800-9894` confirmed?
 - `membership_tier` values — what are the actual tier names? "None / Member / VIP" or different?
@@ -53,11 +53,11 @@ When you make a decision, mark it ✅ DECIDED and add the choice + date.
 
 | Where | Dashboard says | Buildsheet says | Recommendation |
 |-------|---------------|-----------------|----------------|
-| Flow 08 T02 sig | "Izzy, RunRec" | "Sal" | Use "The RunRec Team" — fits voice doctrine for informational/segmenting touch |
-| Flow 09 T04 sig | "Izzy, RunRec" | "Sal" | "The RunRec Team" — informational tier presentation |
+| Flow 08 T02 sig | "Izzy, RunRec" | "Sal" | Use "RunRec Team" — fits voice doctrine for informational/segmenting touch |
+| Flow 09 T04 sig | "Izzy, RunRec" | "Sal" | "RunRec Team" — informational tier presentation |
 | Flow 09 T05 SMS body | "-Izzy" | "-Sal" | "-Sal – RunRec Co-Owner" — matches sender label change per spec |
-| Flow 09 T06 sig | "Izzy, RunRec" | "RunRec Team" | "The RunRec Team" — matches buildsheet, voice doctrine |
-| Flow 11 T01 sig | "Izzy, RunRec" | (Sal & Izzy removed per spec) | "— The RunRec Team" — matches voice doctrine |
+| Flow 09 T06 sig | "Izzy, RunRec" | "RunRec Team" | "RunRec Team" — matches buildsheet, voice doctrine |
+| Flow 11 T01 sig | "Izzy, RunRec" | (Sal & Izzy removed per spec) | "— RunRec Team" — matches voice doctrine |
 
 **Recommendation:** Adopt the recommendations above (right column). Sweep the dashboard HTML to match. Sweep the per-flow guides to match.
 

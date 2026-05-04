@@ -185,7 +185,7 @@ We'd love to hear from you. Quick one — would you mind dropping a line on Goog
 
 - **Channel:** Email
 - **Send delay:** Wait 3 days after Touch 01 (i.e., 3 days + 2 hours after `booking_end_time`)
-- **From name:** `The RunRec`
+- **From name:** `RunRec`
 - **From email:** `contact@therunrec.com`
 - **Reply-to:** same as From
 - **Subject line:** `These slots are still open this week.`

@@ -116,7 +116,7 @@ END
 
 - **Channel:** Email
 - **Send delay:** Immediate on trigger (11 months after party, 10am local)
-- **From name:** `The RunRec`
+- **From name:** `RunRec`
 - **From email:** `contact@therunrec.com`
 - **Reply-to:** same as From
 - **Subject line:** `Can you believe it's been a year?`
@@ -152,7 +152,7 @@ END
 
 - **Channel:** Email
 - **Send delay:** Wait 7 days, send at 10am
-- **From name:** `The RunRec`
+- **From name:** `RunRec`
 - **From email:** `contact@therunrec.com`
 - **Reply-to:** same as From
 - **Subject line:** `Same date next year? — we're holding it for you.`
@@ -224,7 +224,7 @@ Hey {{ profile.parent_name|default:first_name|default:'there' }} — anniversary
 
 - **Channel:** Email
 - **Send delay:** Wait 7 days, send at 10am
-- **From name:** `The RunRec`
+- **From name:** `RunRec`
 - **From email:** `contact@therunrec.com`
 - **Reply-to:** same as From
 - **Subject line:** `3 ways to do this year's party.`

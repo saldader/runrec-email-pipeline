@@ -178,7 +178,7 @@ The build instructions below assume Option A.
 
 <p>Book: <a href="https://therunrec.com/book" style="color:#e85a3e;text-decoration:underline;font-weight:600;">therunrec.com/book</a></p>
 
-<p style="font-style:italic;margin-top:20px;">— The RunRec Team</p>
+<p style="font-style:italic;margin-top:20px;">— RunRec Team</p>
 
 <hr style="border:none;border-top:1px dashed rgba(26,26,26,0.18);margin:20px 0;" />
 
@@ -218,14 +218,14 @@ If `hours_included` and `booking_window` aren't profile properties yet, you can 
 
 <p>→ <strong>Saturday/Sunday peak slots</strong> are bookable 6-12 weeks out (vs 2 weeks for non-members). Book a recurring slot.<br>
 → <strong>The 5-10% booking discount</strong> auto-applies. No code needed.<br>
-→ <strong>The 10% product discount</strong> works on balls, gear, and the RunRec Ball ($49.99 minus 10% = $44.99).<br>
+→ <strong>The 10% product discount</strong> works on balls, gear, and RunRec Ball ($49.99 minus 10% = $44.99).<br>
 → <strong>Member-only events</strong> (next one: {{next_event}}).</p>
 
 <p>Most useful first move: <strong>book a Saturday morning slot 4 weeks out.</strong> Saturday 10am-12pm Court A is the most-requested member slot.</p>
 
 <p>Book: <a href="https://therunrec.com/book" style="color:#e85a3e;text-decoration:underline;font-weight:600;">therunrec.com/book</a></p>
 
-<p style="font-style:italic;margin-top:20px;">— The RunRec Team</p>
+<p style="font-style:italic;margin-top:20px;">— RunRec Team</p>
 
 <hr style="border:none;border-top:1px dashed rgba(26,26,26,0.18);margin:20px 0;" />
 
@@ -265,7 +265,7 @@ If `hours_included` and `booking_window` aren't profile properties yet, you can 
 
 <p>We read every response. <strong>If anything's off, we want to know now.</strong></p>
 
-<p style="font-style:italic;margin-top:20px;">— The RunRec Team</p>
+<p style="font-style:italic;margin-top:20px;">— RunRec Team</p>
 
 <hr style="border:none;border-top:1px dashed rgba(26,26,26,0.18);margin:20px 0;" />
 
@@ -304,7 +304,7 @@ Replace `{{survey_url}}` with the actual Typeform/Google Forms URL.
 
 <p>You're already on the math right side of the line.</p>
 
-<p style="font-style:italic;margin-top:20px;">— The RunRec Team</p>
+<p style="font-style:italic;margin-top:20px;">— RunRec Team</p>
 
 <hr style="border:none;border-top:1px dashed rgba(26,26,26,0.18);margin:20px 0;" />
 
@@ -353,7 +353,7 @@ If this is too complex for launch, ship Touch 04 with hard-coded "average member
 
 <p>Reply with the tier you want or just stay put.</p>
 
-<p style="font-style:italic;margin-top:20px;">— The RunRec Team</p>
+<p style="font-style:italic;margin-top:20px;">— RunRec Team</p>
 
 <hr style="border:none;border-top:1px dashed rgba(26,26,26,0.18);margin:20px 0;" />
 

@@ -244,7 +244,7 @@ If your Klaviyo plan doesn't include the click-to-property feature, fall back to
 - **Channel:** SMS
 - **Send delay:** Wait `2 days` after Touch 02 → Day 5 total
 - **Sender label / From:** `Sal – RunRec Co-Owner`
-  - **In Klaviyo:** Settings → SMS → Sender Profiles → make sure a sender labeled "Sal – RunRec Co-Owner" exists. If not, create one and tie it to the RunRec long code (+1 519-800-9894).
+  - **In Klaviyo:** Settings → SMS → Sender Profiles → make sure a sender labeled "Sal – RunRec Co-Owner" exists. If not, create one and tie it to RunRec long code (+1 519-800-9894).
 - **Send time window:** 12:00 PM – 5:00 PM recipient local time
 
 #### Body content (SMS — exact text, 160 chars matters)

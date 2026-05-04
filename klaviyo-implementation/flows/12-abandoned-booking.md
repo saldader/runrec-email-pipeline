@@ -181,7 +181,7 @@ EXIT
 
 <p>Lock yours in: <a href="{{ event.resume_url }}" style="color:#e85a3e;text-decoration:underline;font-weight:600;">Resume booking</a></p>
 
-<p style="font-style:italic;margin-top:20px;">— The RunRec Team</p>
+<p style="font-style:italic;margin-top:20px;">— RunRec Team</p>
 
 <hr style="border:none;border-top:1px dashed rgba(26,26,26,0.18);margin:20px 0;" />
 

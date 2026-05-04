@@ -169,13 +169,13 @@ The minimum vocabulary to navigate Klaviyo. Each term is defined the first time 
 | **Smart Sending** | A Klaviyo setting that prevents the same person from receiving the same email or SMS within a short time window (default: 16 hours email, 12 hours SMS). |
 | **Quiet Hours** | A Klaviyo setting that prevents sends outside specified hours per recipient's timezone. Standard: 9 PM to 9 AM. |
 | **Suppression** | Marking a profile as "do not send to." Different from Unsubscribe. Used for hard bounces, spam complaints, and specific marketing actions. |
-| **Sender Profile** | The from-name + from-email combination shown to recipients. Example: "The RunRec <contact@therunrec.com>." |
+| **Sender Profile** | The from-name + from-email combination shown to recipients. Example: "RunRec <contact@therunrec.com>." |
 | **Sender Domain** (a.k.a. "branded sending domain") | The domain Klaviyo uses behind the scenes to send your email. Without your own (e.g., `send.therunrec.com`), Klaviyo signs with their generic domain — bad for deliverability. |
 | **Authentication** (DKIM / SPF / DMARC) | DNS records that prove your sender domain is legitimately you. Without these, Gmail/Yahoo will dump your emails to spam. |
 | **Merge Tag** | A placeholder in copy that gets replaced with profile-specific data at send time. Example: `{{ first_name }}` becomes "Hassan" when the email goes to Hassan. |
 | **Dashboard** | The deployed visual reference at https://saldader.github.io/runrec-email-pipeline/ that shows every email and SMS in the system. Each flow guide will tell you which dashboard URL to copy from. |
 | **Buildsheet** | The architecture document at `~/vault/runrec/marketing/klaviyo-master-buildsheet-v2.md`. Reference for *why* things are designed the way they are. |
-| **Voice Doctrine** | The rule for which voice signs each touch (Sal & Izzy / Sal alone / `{{location_manager}}` / The RunRec Team). See buildsheet Section 00.5. |
+| **Voice Doctrine** | The rule for which voice signs each touch (Sal & Izzy / Sal alone / `{{location_manager}}` / RunRec Team). See buildsheet Section 00.5. |
 | **Mechanic Doctrine** | The rule for redemption mechanism (reply-to-redeem, not promo codes). See buildsheet Section 00.6. |
 
 ---

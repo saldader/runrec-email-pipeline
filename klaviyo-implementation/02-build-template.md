@@ -191,7 +191,7 @@ For each email, the per-flow guide gives you:
 |-------|---------------|------------|
 | **Touch number** | T01, T02, T03... | Drag an Email block into the canvas at the correct position per the map |
 | **Send delay** | When this email fires (e.g., "immediate after trigger" or "Day 3, 10 AM recipient time") | Configure the time-delay block before this email |
-| **From name** | Sender name shown to recipient (e.g., `The RunRec` or `Sal at The RunRec`) | In email block → right panel → **From label** |
+| **From name** | Sender name shown to recipient (e.g., `RunRec` or `Sal at RunRec`) | In email block → right panel → **From label** |
 | **From email** | Sender email (e.g., `contact@therunrec.com`) | In email block → right panel → **From email** — choose from sender profiles created in Pre-Flight Section C |
 | **Reply-to** | Where replies go | In email block → right panel → **Reply-to** |
 | **Subject line** | The exact subject (already written in the dashboard) | Copy from dashboard URL → paste into **Subject line** field |
@@ -248,7 +248,7 @@ For each SMS, the per-flow guide gives you:
 
 1. **Maximum 160 characters** for a single SMS segment. Klaviyo will warn if you exceed; longer messages are split into multiple billed segments.
 2. **The first SMS in any flow must include opt-out language**: "Reply STOP to opt out" or compact form ("Stop=opt-out"). Required by CASL (Canada) and TCPA (US).
-3. **No links shorter than 8 characters** — short URLs (e.g., `bit.ly/x`) trigger spam filters. Use full URLs or the RunRec branded short link `runrec.co/...`
+3. **No links shorter than 8 characters** — short URLs (e.g., `bit.ly/x`) trigger spam filters. Use full URLs or RunRec branded short link `runrec.co/...`
 4. **Sender label is the visible "from" name** in the customer's text app. Standard: `RunRec`. Sometimes `RunRec Team` per Voice Doctrine.
 
 ---
@@ -378,7 +378,7 @@ For the first 7 days after a flow goes live, watch closely.
 
 To make this template concrete, here's how it plays out for a fictional flow called "Welcome to Pickleball Night."
 
-*The per-flow guide says: Purpose is to onboard signups to the Pickleball Night event series. Trigger is "added to list `Pickleball Night Signups`." Filter: profile has email consent. Exit condition: profile makes a Pickleball booking. Smart Sending ON, Quiet Hours 9-9. Flow shape is 3 emails over 7 days: T01 immediate "Welcome to Pickleball Nights," T02 day 3 "What to expect your first night," T03 day 7 "Lock in your first session." All 3 use the `RR - Flow Personal v1` template. The from-name is "The RunRec," from-email is `contact@therunrec.com`, reply-to same. Each email's body lives at `https://saldader.github.io/runrec-email-pipeline/pickleball-welcome.html#t01` etc. — copy from the dashboard, paste into Klaviyo. Run Test 1 (send test of each), Test 2 (test profile through the full flow), Test 3 (try a profile without email consent — should be excluded), Test 4 (trigger then book — confirm exit). Activation checklist: all the standards plus Sal's approval. Post-launch: watch open rate on T01 (should hit 45%+), unsubscribe rate (under 0.5%), and the conversion rate to first booking.*
+*The per-flow guide says: Purpose is to onboard signups to the Pickleball Night event series. Trigger is "added to list `Pickleball Night Signups`." Filter: profile has email consent. Exit condition: profile makes a Pickleball booking. Smart Sending ON, Quiet Hours 9-9. Flow shape is 3 emails over 7 days: T01 immediate "Welcome to Pickleball Nights," T02 day 3 "What to expect your first night," T03 day 7 "Lock in your first session." All 3 use the `RR - Flow Personal v1` template. The from-name is "RunRec," from-email is `contact@therunrec.com`, reply-to same. Each email's body lives at `https://saldader.github.io/runrec-email-pipeline/pickleball-welcome.html#t01` etc. — copy from the dashboard, paste into Klaviyo. Run Test 1 (send test of each), Test 2 (test profile through the full flow), Test 3 (try a profile without email consent — should be excluded), Test 4 (trigger then book — confirm exit). Activation checklist: all the standards plus Sal's approval. Post-launch: watch open rate on T01 (should hit 45%+), unsubscribe rate (under 0.5%), and the conversion rate to first booking.*
 
 That's the rhythm. Same beats, every flow.
 

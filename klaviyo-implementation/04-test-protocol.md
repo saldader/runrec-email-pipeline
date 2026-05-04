@@ -195,10 +195,10 @@ For every email touch in the flow, open it in your inbox and check:
 |---------------|--------------|
 | Subject line | Matches the dashboard. No raw merge tags (`{{first_name}}`). No "RE:" or "FW:" prefix. |
 | Preview text | Shows in the inbox preview. Doesn't repeat the subject. Under 90 characters before truncation. |
-| From-name + from-email | Matches what the spec says (e.g., "The RunRec <contact@therunrec.com>" for consumer flows; `{{location_manager}}` for B2B) |
+| From-name + from-email | Matches what the spec says (e.g., "RunRec <contact@therunrec.com>" for consumer flows; `{{location_manager}}` for B2B) |
 | Body copy | Matches the dashboard exactly. No raw merge tags. Personalization shows the test profile's data. |
 | Logo | Renders. Not a broken-image placeholder. |
-| Footer | Shows business name (The RunRec), physical address (283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8), and unsubscribe link |
+| Footer | Shows business name (RunRec), physical address (283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8), and unsubscribe link |
 | Mobile rendering | Open the email on your phone. Does it look right? Text readable? Buttons tappable? |
 
 For each test email, check this in **two clients minimum**: Gmail (web) and your phone's default mail app. If you have access to Outlook or Apple Mail, check those too — they render differently.

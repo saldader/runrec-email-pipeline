@@ -123,7 +123,7 @@ There are NO conditional branches in this flow. Every profile gets every touch i
 
 - **Channel:** Email
 - **Send delay:** Immediate (no wait — fires on trigger)
-- **From name:** `The RunRec`
+- **From name:** `RunRec`
 - **From email:** `contact@therunrec.com`
 - **Reply-to:** same as From
 - **Subject line:** `What you just signed up for.`
@@ -150,7 +150,7 @@ There are NO conditional branches in this flow. Every profile gets every touch i
 2. Click the email block → "Configure content."
 3. Fill the From label, From email, Subject, Preview text exactly as above.
 4. Click "Edit content" → if the template uses drag-drop, switch the body block to "Custom HTML" mode and paste the body content above. Make sure to remove any default placeholder text in the template body.
-5. Add the unsubscribe footer block at the bottom (the template should have one — verify it includes "The RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · unsubscribe · manage preferences").
+5. Add the unsubscribe footer block at the bottom (the template should have one — verify it includes "RunRec · 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 · unsubscribe · manage preferences").
 6. Save → Set status to "Live."
 7. Smart Sending: OFF for this touch (gear icon → uncheck).
 
@@ -162,7 +162,7 @@ There are NO conditional branches in this flow. Every profile gets every touch i
 
 - **Channel:** Email
 - **Send delay:** Wait 1 day, then send at 10am ET (use the "Time delay" action set to "Until specific time of day" → 10:00 AM Eastern Time)
-- **From name:** `The RunRec`
+- **From name:** `RunRec`
 - **From email:** `contact@therunrec.com`
 - **Reply-to:** same as From
 - **Subject line:** `The real reason we built this place.`
@@ -195,7 +195,7 @@ There are NO conditional branches in this flow. Every profile gets every touch i
 
 - **Channel:** Email
 - **Send delay:** Wait 2 days from Touch 02, send at 10am ET
-- **From name:** `The RunRec`
+- **From name:** `RunRec`
 - **From email:** `contact@therunrec.com`
 - **Reply-to:** same as From
 - **Subject line:** `The 11pm court hack nobody tells you.`
@@ -260,7 +260,7 @@ everything good with the booking process? 👍 or any Q?
 
 - **Channel:** Email
 - **Send delay:** Wait 2 days from Touch 04, send at 10am ET
-- **From name:** `The RunRec`
+- **From name:** `RunRec`
 - **From email:** `contact@therunrec.com`
 - **Reply-to:** same as From
 - **Subject line:** `Which type of player are you?`
@@ -308,7 +308,7 @@ Each `[click]` link must be a Klaviyo "update profile property" link, NOT a norm
 
 - **Channel:** Email
 - **Send delay:** Wait 3 days from Touch 05, send at 10am ET
-- **From name:** `The RunRec`
+- **From name:** `RunRec`
 - **From email:** `contact@therunrec.com`
 - **Reply-to:** same as From
 - **Subject line:** `What happens here at 2am.`
@@ -390,7 +390,7 @@ Before you set the flow to "Live," do a real test:
 Before you flip the flow to **Live**:
 
 - [ ] All 7 touches built, content reviewed, sent test email/SMS to yourself
-- [ ] Footer on every email contains: business name "The RunRec," physical address "283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8," functional unsubscribe link, "manage preferences" link
+- [ ] Footer on every email contains: business name "RunRec," physical address "283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8," functional unsubscribe link, "manage preferences" link
 - [ ] Smart Sending: OFF on every touch
 - [ ] Quiet Hours: ON for the 2 SMS touches
 - [ ] All time delays use "recipient's local timezone" (not UTC)
@@ -451,10 +451,10 @@ If your Klaviyo Templates library doesn't have a "Flow / Personal" template, bui
 - **Logo:** Top, centered, 120px wide max
 - **Body font:** sans-serif system stack (`-apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', sans-serif`), 15–16px, line-height 1.6
 - **Body color:** #1a1a1a (near-black)
-- **Link color:** #e85a3e (the RunRec accent orange)
+- **Link color:** #e85a3e (RunRec accent orange)
 - **PS block:** dashed top border, slightly muted color (#2a2a2a), accent color on the bold "PS" prefix
 - **Footer:** light gray background (#ede7db), 11px, contains:
-  - Business name: The RunRec
+  - Business name: RunRec
   - Physical address: 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8
   - Unsubscribe link: `{% unsubscribe %}` (Klaviyo merge tag)
   - Manage preferences link: `{% manage_preferences %}` (Klaviyo merge tag)

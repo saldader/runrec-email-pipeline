@@ -53,7 +53,7 @@ Open the flow in Klaviyo. Walk through every touch in sequence. For each touch:
 |-------|---------------|
 | Subject line | Matches the dashboard at https://saldader.github.io/runrec-email-pipeline/. No typos. No "TEST" or placeholder text. |
 | Preview text | Set (not empty). Doesn't repeat the subject. Under 90 characters before truncation. |
-| From-name | Correct per the voice doctrine (e.g., "The RunRec Team," "Sal Dader," "{{location_manager}}") |
+| From-name | Correct per the voice doctrine (e.g., "RunRec Team," "Sal Dader," "{{location_manager}}") |
 | From-email | Correct per the spec (e.g., `contact@therunrec.com` for consumer, `{{location_manager}}@therunrec.com` for B2B) |
 | Reply-to | Set to a monitored mailbox |
 | Body — desktop render | Open Klaviyo's preview tool. Looks clean. No broken images. No overflow. |
@@ -62,7 +62,7 @@ Open the flow in Klaviyo. Walk through every touch in sequence. For each touch:
 | All links work | Click each one in the preview. No 404s. No suspicious URL shorteners. |
 | Unsubscribe link | Visible in footer. Working. Goes to the Klaviyo unsubscribe page. |
 | Physical address | Visible in footer: 283 Northfield Dr. E Unit 13, Waterloo, ON N2J 4G8 |
-| Business name | "The RunRec" present in footer |
+| Business name | "RunRec" present in footer |
 | Logo | Renders. Not pixelated. Has alt text. |
 | No spam-trigger words in subject | Avoid "$", "FREE", "WINNER", "ACT NOW", "LIMITED TIME", all-caps subjects |
 

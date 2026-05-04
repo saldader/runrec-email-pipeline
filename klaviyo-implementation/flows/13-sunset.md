@@ -152,7 +152,7 @@ EXIT
 
 <p>If we don't hear from you, we'll automatically remove you from the list in 14 days.</p>
 
-<p style="font-style:italic;margin-top:20px;">— The RunRec Team</p>
+<p style="font-style:italic;margin-top:20px;">— RunRec Team</p>
 
 <hr style="border:none;border-top:1px dashed rgba(26,26,26,0.18);margin:20px 0;" />
 
@@ -211,7 +211,7 @@ For launch, the monthly preference page can just say "Got it — you'll receive 
 
 <p>No hard feelings. <strong>Just data hygiene.</strong></p>
 
-<p style="font-style:italic;margin-top:20px;">— The RunRec Team</p>
+<p style="font-style:italic;margin-top:20px;">— RunRec Team</p>
 
 <hr style="border:none;border-top:1px dashed rgba(26,26,26,0.18);margin:20px 0;" />
 

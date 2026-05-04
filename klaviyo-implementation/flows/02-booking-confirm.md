@@ -116,7 +116,7 @@ END (booking happens; profile exits and Flow 03 picks up 2 hrs after booking end
 
 - **Channel:** Email
 - **Send delay:** Immediate
-- **From name:** `The RunRec`
+- **From name:** `RunRec`
 - **From email:** `contact@therunrec.com`
 - **Reply-to:** same as From
 - **Subject line:** `You're locked in. Here's everything.`
@@ -134,7 +134,7 @@ Parking: Free, lot to the left of the building<br>
 Bring: Indoor shoes, water, Bluetooth speaker if you want music</p>
 <p>The door access code arrives by SMS 2 hours before your booking time — keep your phone nearby.</p>
 <p>If anything changes, just reply.</p>
-<p style="font-style:italic;">— The RunRec team</p>
+<p style="font-style:italic;">— RunRec team</p>
 <p style="margin-top:24px;padding-top:20px;border-top:1px dashed #999;font-size:14px;"><strong style="color:#e85a3e;">PS</strong> — Hosting a party? Our birthday packages already include a coordinator and full setup. Reply if you want package details.</p>
 ```
 
@@ -190,7 +190,7 @@ All set, {{ first_name|default:'there' }} — see you {{ event.date }} at {{ eve
 
 - **Channel:** Email
 - **Send delay:** Wait until 24 hours before `event.date` + `event.time`
-- **From name:** `The RunRec`
+- **From name:** `RunRec`
 - **From email:** `contact@therunrec.com`
 - **Reply-to:** same as From
 - **Subject line:** `Tomorrow's checklist.`
@@ -209,7 +209,7 @@ All set, {{ first_name|default:'there' }} — see you {{ event.date }} at {{ eve
 Parking: lot to the left of the building, free.<br>
 Address: 283 Northfield Dr. E Unit 13, Waterloo</p>
 <p>Anything else, just reply.</p>
-<p style="font-style:italic;">— The RunRec team</p>
+<p style="font-style:italic;">— RunRec team</p>
 <p style="margin-top:24px;padding-top:20px;border-top:1px dashed #999;font-size:14px;"><strong style="color:#e85a3e;">PS</strong> — Hosting a party? Our birthday packages include a coordinator who arrives 30 min early to set up. Reply for package details.</p>
 ```
 

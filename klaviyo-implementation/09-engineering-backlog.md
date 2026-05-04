@@ -110,7 +110,7 @@ This is the integration work that's NOT visible in the Klaviyo UI but blocks the
 **Severity:** Critical
 
 **What to build:**
-- Build a corporate inquiry form on the RunRec website (or use the existing one if already built)
+- Build a corporate inquiry form on RunRec website (or use the existing one if already built)
 - Form fields: company name, contact name, contact email, contact phone, # of people, use case (team builder / league / corporate event), preferred location, preferred date range
 - On submit: fire `Corporate Inquiry` event to Klaviyo
 - Required event payload:

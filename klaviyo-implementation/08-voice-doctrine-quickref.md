@@ -13,9 +13,9 @@ There are four signatures in active rotation across the 13 flows. Each has a spe
 | **Sal & Izzy – RunRec Co-Owners** | Founder warmth moments. Family/community/long-relationship touches. The reader should feel like the people who built RunRec are personally talking to them. | Welcome Sec 1 T01 (What you signed up for), T02 (Origin story), T06 (Behind the scenes); Anniversary Sec 5 T01 (Memory trigger); Lifecycle Sec 11 T07 (Door's always open) |
 | **Sal – RunRec Co-Owner** | Personal closes and high-touch consults. The reader should feel like a real person is reaching out one-to-one — not the brand, not the team. | Anniversary Sec 5 T02/T03/T05 (early lock, personal nudge, decision-force close); Lead Nurture Sec 8 T03 (Conversation opener SMS); Corporate Sec 9 T01/T03/T05 (Personal-feel reply, Case study, Quick question re-open); Lifecycle Sec 11 T08 (Come back: 50% off) |
 | **{{location_manager}}** | Multi-location B2B. The signature merge-tag resolves to the local manager's name (e.g., "Aren" for Burlington). Body uses {{location_manager}} too; From: header uses {{location_manager}}@therunrec.com. | VIP Sec 7 T01 (Status conferral); Corporate Sec 9 — ALL touches (T01-T07 from-header + sender-note panel; T07 body + signature) |
-| **The RunRec Team** | Everything else. Operational, automated, informational, list-hygiene. Default voice when none of the above apply. | All other touches across all flows. Default fallback. |
+| **RunRec Team** | Everything else. Operational, automated, informational, list-hygiene. Default voice when none of the above apply. | All other touches across all flows. Default fallback. |
 
-### When in doubt: use **The RunRec Team**
+### When in doubt: use **RunRec Team**
 
 Default to the team voice. The other three are exceptions for specific moments.
 
@@ -51,27 +51,27 @@ Per-flow sender addresses. From: header configuration in Klaviyo.
 
 | Flow | From: name | From: email | Notes |
 |------|-----------|-------------|-------|
-| 01 Welcome | The RunRec | contact@therunrec.com | Consumer touchpoint |
-| 02 Booking Confirm | The RunRec | contact@therunrec.com | Transactional |
-| 03 Post-Session | The RunRec | contact@therunrec.com | Consumer transactional + nudge |
-| 04 Customer Birthday | The RunRec | contact@therunrec.com | Consumer celebratory |
-| 05 Anniversary | The RunRec | contact@therunrec.com | Consumer celebratory |
-| 06 Win-Back | The RunRec | contact@therunrec.com | Consumer re-engagement |
+| 01 Welcome | RunRec | contact@therunrec.com | Consumer touchpoint |
+| 02 Booking Confirm | RunRec | contact@therunrec.com | Transactional |
+| 03 Post-Session | RunRec | contact@therunrec.com | Consumer transactional + nudge |
+| 04 Customer Birthday | RunRec | contact@therunrec.com | Consumer celebratory |
+| 05 Anniversary | RunRec | contact@therunrec.com | Consumer celebratory |
+| 06 Win-Back | RunRec | contact@therunrec.com | Consumer re-engagement |
 | 07 VIP T01 | {{location_manager}} | {{location_manager}}@therunrec.com | Personal status award |
-| 07 VIP T02-T05 | The RunRec | contact@therunrec.com | Other VIP touches |
-| 08 Lead Nurture | The RunRec | contact@therunrec.com | EXCEPT Touch 03 SMS sender label = "Sal – RunRec Co-Owner" |
+| 07 VIP T02-T05 | RunRec | contact@therunrec.com | Other VIP touches |
+| 08 Lead Nurture | RunRec | contact@therunrec.com | EXCEPT Touch 03 SMS sender label = "Sal – RunRec Co-Owner" |
 | 09 Corporate ALL | {{location_manager}} | {{location_manager}}@therunrec.com | B2B requires personal sender per location |
-| 10 Membership Conversion | The RunRec | contact@therunrec.com | Consumer conversion |
-| 11 Lifecycle | The RunRec | contact@therunrec.com | Member touchpoints |
-| 12 Abandoned Booking | The RunRec | contact@therunrec.com | Consumer recovery |
-| 13 Sunset | The RunRec | contact@therunrec.com | List hygiene |
+| 10 Membership Conversion | RunRec | contact@therunrec.com | Consumer conversion |
+| 11 Lifecycle | RunRec | contact@therunrec.com | Member touchpoints |
+| 12 Abandoned Booking | RunRec | contact@therunrec.com | Consumer recovery |
+| 13 Sunset | RunRec | contact@therunrec.com | List hygiene |
 
 ### Multi-location merge tag handling
 
 `{{location_manager}}` and `{{location_manager}}@therunrec.com` are **profile properties**, not literal text. Klaviyo will substitute them per-recipient based on their `location_manager` and `location_manager_email` profile properties.
 
 For the Waterloo HQ rollout (only location currently active), set the default values to:
-- `location_manager` = "The RunRec Team"
+- `location_manager` = "RunRec Team"
 - `location_manager_email` = "contact@therunrec.com"
 - `location_phone` = "519-800-9894"
 
@@ -83,12 +83,12 @@ Future locations populate per their own manager.
 
 ## Default sign-off conventions
 
-When the per-flow guide says "signed The RunRec Team", use these exact strings:
+When the per-flow guide says "signed RunRec Team", use these exact strings:
 
 | Channel | Format |
 |---------|--------|
-| Email body | `— The RunRec Team` (em-dash + space + "The RunRec Team") |
-| SMS body | `-The RunRec Team` (hyphen + "The RunRec Team") |
+| Email body | `— RunRec Team` (em-dash + space + "RunRec Team") |
+| SMS body | `-RunRec Team` (hyphen + "RunRec Team") |
 | SMS sender label | `RunRec` (just the brand name, no "Team" — sender labels are tight) |
 
 For founder voice:
@@ -111,7 +111,7 @@ For location manager voice:
 | Channel | Format |
 |---------|--------|
 | Email body | `— {{location_manager}}` (just the merge tag, no role descriptor — the From: address makes it clear who they are) |
-| SMS body | (Sec 9 T02 only — `-The RunRec Team` per spec) |
+| SMS body | (Sec 9 T02 only — `-RunRec Team` per spec) |
 
 ---
 
@@ -138,7 +138,7 @@ You're writing/checking a touch's signature. Walk through this:
 3. Is this a corporate B2B touch where the local manager owns the relationship?
    → Yes: **{{location_manager}}**
 4. Anything else?
-   → **The RunRec Team**
+   → **RunRec Team**
 
 ---
 
